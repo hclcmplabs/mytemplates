@@ -1,0 +1,24 @@
+{
+    "category": "service",
+    "classification": [
+        "Provisioning" 
+    ],
+    "servicetype": "",
+    "description": "Azure_Create_testRGfuncapp",
+    "files": {},
+    "input_source": "Templates",
+    "metadata": {
+        "file_name": "Azure_Create_testRGfuncapp_content",
+        "extension": "json",
+        "tags": []
+    },
+    "name": "Azure_Create_testRGfuncapp",
+    "resources": [],
+    "scope": "global",
+    "services": [
+        "arm"
+    ],
+    "type": [
+        "Cloud"
+    ]
+}
