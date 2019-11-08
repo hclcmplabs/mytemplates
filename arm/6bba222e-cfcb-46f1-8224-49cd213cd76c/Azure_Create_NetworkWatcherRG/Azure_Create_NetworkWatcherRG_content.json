@@ -1,21 +1,21 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
   "parameters": {
     "networkWatchers_NetworkWatcher_eastus_name": {
-      "defaultValue": "NetworkWatcher_eastus",
+      "defaultValue": "NetworkWatcher_eastus", 
       "type": "String"
     }
-  },
-  "variables": {},
+  }, 
   "resources": [
     {
-      "type": "Microsoft.Network/networkWatchers",
-      "apiVersion": "2019-09-01",
-      "name": "[parameters('networkWatchers_NetworkWatcher_eastus_name')]",
-      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus'.",
-      "location": "eastus",
-      "properties": {}
+      "name": "[parameters('networkWatchers_NetworkWatcher_eastus_name')]", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus'.", 
+      "apiVersion": "2019-09-01", 
+      "type": "Microsoft.Network/networkWatchers", 
+      "properties": {}, 
+      "location": "eastus"
     }
   ]
 }
