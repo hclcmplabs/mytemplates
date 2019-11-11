@@ -7,24 +7,20 @@
       "defaultValue": "terra1vm", 
       "type": "String"
     }, 
+    "storageAccounts_diag276f6bbed2562354_name": {
+      "defaultValue": "diag276f6bbed2562354", 
+      "type": "String"
+    }, 
     "virtualNetworks_testVnet_name": {
       "defaultValue": "testVnet", 
       "type": "String"
     }, 
-    "storageAccounts_diag146869a94d9f5f42_name": {
-      "defaultValue": "diag146869a94d9f5f42", 
+    "networkInterfaces_testNIC_name": {
+      "defaultValue": "testNIC", 
       "type": "String"
     }, 
     "networkSecurityGroups_testnsg_name": {
       "defaultValue": "testnsg", 
-      "type": "String"
-    }, 
-    "publicIPAddresses_testPublicIP_name": {
-      "defaultValue": "testPublicIP", 
-      "type": "String"
-    }, 
-    "networkInterfaces_testNIC_name": {
-      "defaultValue": "testNIC", 
       "type": "String"
     }
   }, 
@@ -78,30 +74,6 @@
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg'."
     }, 
     {
-      "sku": {
-        "name": "Basic"
-      }, 
-      "name": "[parameters('publicIPAddresses_testPublicIP_name')]", 
-      "tags": {
-        "environment": "Terraform Demo"
-      }, 
-      "apiVersion": "2019-09-01", 
-      "location": "eastus", 
-      "type": "Microsoft.Network/publicIPAddresses", 
-      "properties": {
-        "publicIPAllocationMethod": "Dynamic", 
-        "ipTags": [], 
-        "dnsSettings": {
-          "domainNameLabel": "terra1vm", 
-          "fqdn": "terra1vm.eastus.cloudapp.azure.com"
-        }, 
-        "publicIPAddressVersion": "IPv4", 
-        "ipAddress": "13.82.179.14", 
-        "idleTimeoutInMinutes": 4
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/publicIPAddresses/testPublicIP'."
-    }, 
-    {
       "name": "[parameters('virtualNetworks_testVnet_name')]", 
       "tags": {
         "environment": "Terraform Demo"
@@ -142,7 +114,7 @@
         "name": "Standard_LRS"
       }, 
       "kind": "Storage", 
-      "name": "[parameters('storageAccounts_diag146869a94d9f5f42_name')]", 
+      "name": "[parameters('storageAccounts_diag276f6bbed2562354_name')]", 
       "tags": {
         "environment": "Terraform Demo"
       }, 
@@ -170,7 +142,7 @@
         }, 
         "isHnsEnabled": false
       }, 
-      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag146869a94d9f5f42'."
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354'."
     }, 
     {
       "name": "[concat(parameters('networkSecurityGroups_testnsg_name'), '/nodejs')]", 
@@ -235,11 +207,11 @@
       }
     }, 
     {
-      "name": "[concat(parameters('storageAccounts_diag146869a94d9f5f42_name'), '/default')]", 
+      "name": "[concat(parameters('storageAccounts_diag276f6bbed2562354_name'), '/default')]", 
       "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag146869a94d9f5f42/blobServices/default'.", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354/blobServices/default'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag146869a94d9f5f42_name'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
       ], 
       "type": "Microsoft.Storage/storageAccounts/blobServices", 
       "properties": {
@@ -260,7 +232,7 @@
       "location": "eastus", 
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testNIC_name'))]", 
-        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_diag146869a94d9f5f42_name'))]"
+        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
       ], 
       "type": "Microsoft.Compute/virtualMachines", 
       "properties": {
@@ -278,13 +250,11 @@
             "name": "myOsDisk", 
             "writeAcceleratorEnabled": false, 
             "managedDisk": {
-              "storageAccountType": "Premium_LRS", 
               "id": "[resourceId('Microsoft.Compute/disks', 'myOsDisk')]"
             }, 
-            "diskSizeGB": 30, 
+            "osType": "Linux", 
             "createOption": "FromImage", 
-            "caching": "ReadWrite", 
-            "osType": "Linux"
+            "caching": "ReadWrite"
           }, 
           "dataDisks": []
         }, 
@@ -318,25 +288,12 @@
         }, 
         "diagnosticsProfile": {
           "bootDiagnostics": {
-            "storageUri": "[concat('https://', parameters('storageAccounts_diag146869a94d9f5f42_name'), '.blob.core.windows.net/')]", 
+            "storageUri": "[concat('https://', parameters('storageAccounts_diag276f6bbed2562354_name'), '.blob.core.windows.net/')]", 
             "enabled": true
           }
         }
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Compute/virtualMachines/terra1vm'."
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_diag146869a94d9f5f42_name'), '/default/bootdiagnostics-terra1vm-23924add-b5a2-4f03-9e40-5b18988769db')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag146869a94d9f5f42/blobServices/default/containers/bootdiagnostics-terra1vm-23924add-b5a2-4f03-9e40-5b18988769db'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_diag146869a94d9f5f42_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag146869a94d9f5f42_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
     }, 
     {
       "name": "[parameters('networkInterfaces_testNIC_name')]", 
@@ -346,7 +303,6 @@
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_testPublicIP_name'))]", 
         "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_testVnet_name'), 'testSubnet')]", 
         "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
       ], 
@@ -366,19 +322,29 @@
               "subnet": {
                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_testVnet_name'), 'testSubnet')]"
               }, 
-              "primary": true, 
-              "privateIPAddressVersion": "IPv4", 
-              "publicIPAddress": {
-                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_testPublicIP_name'))]"
-              }, 
               "privateIPAllocationMethod": "Dynamic", 
-              "privateIPAddress": "10.0.1.4"
+              "primary": true, 
+              "privateIPAddress": "10.0.1.4", 
+              "privateIPAddressVersion": "IPv4"
             }
           }
         ], 
         "enableIPForwarding": false
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkInterfaces/testNIC'."
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_diag276f6bbed2562354_name'), '/default/bootdiagnostics-terra1vm-d08f5fc0-9410-4255-a837-392400057164')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354/blobServices/default/containers/bootdiagnostics-terra1vm-d08f5fc0-9410-4255-a837-392400057164'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_diag276f6bbed2562354_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
     }
   ]
 }
