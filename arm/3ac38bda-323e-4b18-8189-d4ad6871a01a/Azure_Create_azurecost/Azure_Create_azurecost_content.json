@@ -144,10 +144,6 @@
       "defaultValue": "testtmetriicaleret", 
       "type": "String"
     }, 
-    "storageAccounts_azurecostdiag_name": {
-      "defaultValue": "azurecostdiag", 
-      "type": "String"
-    }, 
     "namespaces_cstestsbus_externalid": {
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.ServiceBus/namespaces/cstestsbus", 
       "type": "String"
@@ -1655,38 +1651,6 @@
       "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.RecoveryServices/vaults/vault964'."
     }, 
     {
-      "sku": {
-        "tier": "Standard", 
-        "name": "Standard_LRS"
-      }, 
-      "kind": "Storage", 
-      "name": "[parameters('storageAccounts_azurecostdiag_name')]", 
-      "apiVersion": "2019-04-01", 
-      "location": "eastus", 
-      "type": "Microsoft.Storage/storageAccounts", 
-      "properties": {
-        "supportsHttpsTrafficOnly": true, 
-        "encryption": {
-          "services": {
-            "blob": {
-              "enabled": true
-            }, 
-            "file": {
-              "enabled": true
-            }
-          }, 
-          "keySource": "Microsoft.Storage"
-        }, 
-        "networkAcls": {
-          "defaultAction": "Allow", 
-          "ipRules": [], 
-          "virtualNetworkRules": [], 
-          "bypass": "AzureServices"
-        }
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag'."
-    }, 
-    {
       "name": "[parameters('virtualMachines_devtestnaveen_name')]", 
       "apiVersion": "2019-03-01", 
       "location": "eastus", 
@@ -2099,88 +2063,6 @@
       "properties": {
         "sendToOwners": "DoNotSend", 
         "customEmailAddresses": []
-      }
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices", 
-      "properties": {
-        "deleteRetentionPolicy": {
-          "enabled": false
-        }, 
-        "cors": {
-          "corsRules": []
-        }
-      }
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/backupdevtest-9b7fac505d0e41bfb31253afd15edb54')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/backupdevtest-9b7fac505d0e41bfb31253afd15edb54'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-devtestwi-11a8950a-91be-4f09-9afd-6c525763807b')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-devtestwi-11a8950a-91be-4f09-9afd-6c525763807b'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-testvm1-16648f67-3bb3-42e4-8ae7-010d8268aab2')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-testvm1-16648f67-3bb3-42e4-8ae7-010d8268aab2'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-testvm2-0fc85a75-5e9a-4ade-9410-30f7eef06a75')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-testvm2-0fc85a75-5e9a-4ade-9410-30f7eef06a75'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-testvm-30fb0e4d-b4ef-4497-ae60-1929a2b15101')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-testvm-30fb0e4d-b4ef-4497-ae60-1929a2b15101'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
       }
     }, 
     {
