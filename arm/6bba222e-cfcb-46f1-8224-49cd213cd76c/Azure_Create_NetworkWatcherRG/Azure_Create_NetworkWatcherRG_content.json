@@ -3,12 +3,128 @@
   "contentVersion": "1.0.0.0", 
   "variables": {}, 
   "parameters": {
+    "storageAccounts_hcldemo_name": {
+      "defaultValue": "hcldemo", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_hcldemonsg_name": {
+      "defaultValue": "hcldemonsg", 
+      "type": "String"
+    }, 
+    "virtualNetworks_testVnet_name": {
+      "defaultValue": "testVnet", 
+      "type": "String"
+    }, 
     "networkWatchers_NetworkWatcher_eastus_name": {
       "defaultValue": "NetworkWatcher_eastus", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_testnsg_name": {
+      "defaultValue": "testnsg", 
+      "type": "String"
+    }, 
+    "virtualNetworks_hcldemoVnet_name": {
+      "defaultValue": "hcldemoVnet", 
       "type": "String"
     }
   }, 
   "resources": [
+    {
+      "name": "[parameters('networkSecurityGroups_hcldemonsg_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "SSH", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "access": "Allow", 
+              "direction": "Inbound", 
+              "protocol": "Tcp", 
+              "destinationPortRanges": [], 
+              "priority": 1001, 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourceAddressPrefix": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourcePortRange": "*"
+            }
+          }, 
+          {
+            "name": "nodejs", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "access": "Allow", 
+              "direction": "Inbound", 
+              "protocol": "Tcp", 
+              "destinationPortRanges": [], 
+              "priority": 1002, 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "3000", 
+              "sourceAddressPrefix": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourcePortRange": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkSecurityGroups/hcldemonsg'."
+    }, 
+    {
+      "name": "[parameters('networkSecurityGroups_testnsg_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "SSH", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "access": "Allow", 
+              "direction": "Inbound", 
+              "protocol": "Tcp", 
+              "destinationPortRanges": [], 
+              "priority": 1001, 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourceAddressPrefix": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourcePortRange": "*"
+            }
+          }, 
+          {
+            "name": "nodejs", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "access": "Allow", 
+              "direction": "Inbound", 
+              "protocol": "Tcp", 
+              "destinationPortRanges": [], 
+              "priority": 1002, 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "3000", 
+              "sourceAddressPrefix": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourcePortRange": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkSecurityGroups/testnsg'."
+    }, 
     {
       "name": "[parameters('networkWatchers_NetworkWatcher_eastus_name')]", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus'.", 
@@ -16,6 +132,266 @@
       "type": "Microsoft.Network/networkWatchers", 
       "properties": {}, 
       "location": "eastus"
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_hcldemoVnet_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "subnets": [
+          {
+            "name": "testSubnet", 
+            "properties": {
+              "addressPrefix": "10.0.1.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "serviceEndpoints": [], 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableVmProtection": false, 
+        "dhcpOptions": {
+          "dnsServers": []
+        }, 
+        "enableDdosProtection": false, 
+        "virtualNetworkPeerings": [], 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/virtualNetworks/hcldemoVnet'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_testVnet_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "subnets": [
+          {
+            "name": "testSubnet", 
+            "properties": {
+              "addressPrefix": "10.0.1.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "serviceEndpoints": [], 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableVmProtection": false, 
+        "dhcpOptions": {
+          "dnsServers": []
+        }, 
+        "enableDdosProtection": false, 
+        "virtualNetworkPeerings": [], 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/virtualNetworks/testVnet'."
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_hcldemo_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-04-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": false, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }, 
+        "isHnsEnabled": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Storage/storageAccounts/hcldemo'."
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_hcldemonsg_name'), '/nodejs')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkSecurityGroups/hcldemonsg/securityRules/nodejs'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_hcldemonsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "access": "Allow", 
+        "direction": "Inbound", 
+        "protocol": "Tcp", 
+        "destinationPortRanges": [], 
+        "priority": 1002, 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3000", 
+        "sourceAddressPrefix": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourcePortRange": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_testnsg_name'), '/nodejs')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/nodejs'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "access": "Allow", 
+        "direction": "Inbound", 
+        "protocol": "Tcp", 
+        "destinationPortRanges": [], 
+        "priority": 1002, 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3000", 
+        "sourceAddressPrefix": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourcePortRange": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_hcldemonsg_name'), '/SSH')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkSecurityGroups/hcldemonsg/securityRules/SSH'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_hcldemonsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "access": "Allow", 
+        "direction": "Inbound", 
+        "protocol": "Tcp", 
+        "destinationPortRanges": [], 
+        "priority": 1001, 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "22", 
+        "sourceAddressPrefix": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourcePortRange": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_testnsg_name'), '/SSH')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/SSH'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "access": "Allow", 
+        "direction": "Inbound", 
+        "protocol": "Tcp", 
+        "destinationPortRanges": [], 
+        "priority": 1001, 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "22", 
+        "sourceAddressPrefix": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourcePortRange": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_hcldemoVnet_name'), '/testSubnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/virtualNetworks/hcldemoVnet/subnets/testSubnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_hcldemoVnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.1.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "serviceEndpoints": [], 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_testVnet_name'), '/testSubnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/testSubnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_testVnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.1.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "serviceEndpoints": [], 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_hcldemo_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Storage/storageAccounts/hcldemo/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_hcldemo_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_hcldemo_name'), '/default/bootdiagnostics-terra1vm-23924add-b5a2-4f03-9e40-5b18988769db')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Storage/storageAccounts/hcldemo/blobServices/default/containers/bootdiagnostics-terra1vm-23924add-b5a2-4f03-9e40-5b18988769db'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_hcldemo_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_hcldemo_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
     }
   ]
 }
