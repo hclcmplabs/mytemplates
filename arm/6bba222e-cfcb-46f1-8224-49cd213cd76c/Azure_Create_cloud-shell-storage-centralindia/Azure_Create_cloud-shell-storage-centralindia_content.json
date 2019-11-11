@@ -3,20 +3,96 @@
   "contentVersion": "1.0.0.0", 
   "variables": {}, 
   "parameters": {
-    "virtualNetworks_testVNET2_name": {
-      "defaultValue": "testVNET2", 
+    "networkInterfaces_myVMNic_name": {
+      "defaultValue": "myVMNic", 
       "type": "String"
     }, 
     "storageAccounts_csg6bba222ecfcbx46f1x822_name": {
       "defaultValue": "csg6bba222ecfcbx46f1x822", 
       "type": "String"
     }, 
+    "virtualNetworks_hcltestVNET_name": {
+      "defaultValue": "hcltestVNET", 
+      "type": "String"
+    }, 
     "storageAccounts_nyhq5avcfwkzgsalinuxvm2_name": {
       "defaultValue": "nyhq5avcfwkzgsalinuxvm2", 
+      "type": "String"
+    }, 
+    "virtualNetworks_MyVNET_name": {
+      "defaultValue": "MyVNET", 
+      "type": "String"
+    }, 
+    "virtualNetworks_testVNET2_name": {
+      "defaultValue": "testVNET2", 
+      "type": "String"
+    }, 
+    "networkInterfaces_hcltestVMNic_name": {
+      "defaultValue": "hcltestVMNic", 
+      "type": "String"
+    }, 
+    "storageAccounts_nyhq5avcfwkzgsalinuxvm32_name": {
+      "defaultValue": "nyhq5avcfwkzgsalinuxvm32", 
       "type": "String"
     }
   }, 
   "resources": [
+    {
+      "name": "[parameters('virtualNetworks_hcltestVNET_name')]", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/virtualNetworks/hcltestVNET'.", 
+      "apiVersion": "2019-09-01", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "Subnet", 
+            "properties": {
+              "addressPrefix": "10.0.0.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }, 
+        "enableDdosProtection": false, 
+        "enableVmProtection": false
+      }, 
+      "location": "eastus"
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_MyVNET_name')]", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/virtualNetworks/MyVNET'.", 
+      "apiVersion": "2019-09-01", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "Subnet", 
+            "properties": {
+              "addressPrefix": "10.0.0.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }, 
+        "enableDdosProtection": false, 
+        "enableVmProtection": false
+      }, 
+      "location": "eastus"
+    }, 
     {
       "name": "[parameters('virtualNetworks_testVNET2_name')]", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/virtualNetworks/testVNET2'.", 
@@ -114,6 +190,130 @@
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/nyhq5avcfwkzgsalinuxvm2'."
     }, 
     {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm32_name')]", 
+      "apiVersion": "2019-04-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": false, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/nyhq5avcfwkzgsalinuxvm32'."
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_hcltestVMNic_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_hcltestVNET_name'), 'Subnet')]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "enableAcceleratedNetworking": false, 
+        "enableIPForwarding": false, 
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_hcltestVNET_name'), 'Subnet')]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "primary": true, 
+              "privateIPAddress": "10.0.0.4", 
+              "privateIPAddressVersion": "IPv4"
+            }
+          }
+        ], 
+        "dnsSettings": {
+          "dnsServers": []
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/networkInterfaces/hcltestVMNic'."
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_myVMNic_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_MyVNET_name'), 'Subnet')]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "enableAcceleratedNetworking": false, 
+        "enableIPForwarding": false, 
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_MyVNET_name'), 'Subnet')]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "primary": true, 
+              "privateIPAddress": "10.0.0.4", 
+              "privateIPAddressVersion": "IPv4"
+            }
+          }
+        ], 
+        "dnsSettings": {
+          "dnsServers": []
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/networkInterfaces/myVMNic'."
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_hcltestVNET_name'), '/Subnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/virtualNetworks/hcltestVNET/subnets/Subnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_hcltestVNET_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.0.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_MyVNET_name'), '/Subnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/virtualNetworks/MyVNET/subnets/Subnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_MyVNET_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.0.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
       "name": "[concat(parameters('virtualNetworks_testVNET2_name'), '/Subnet')]", 
       "apiVersion": "2019-09-01", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Network/virtualNetworks/testVNET2/subnets/Subnet'.", 
@@ -163,12 +363,42 @@
       }
     }, 
     {
+      "name": "[concat(parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm32_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/nyhq5avcfwkzgsalinuxvm32/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm32_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
       "name": "[concat(parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm2_name'), '/default/bootdiagnostics-myubuntuv-6f80096a-2497-4d23-851a-54413ae30e15')]", 
       "apiVersion": "2019-04-01", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/nyhq5avcfwkzgsalinuxvm2/blobServices/default/containers/bootdiagnostics-myubuntuv-6f80096a-2497-4d23-851a-54413ae30e15'.", 
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm2_name'), 'default')]", 
         "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm2_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm32_name'), '/default/bootdiagnostics-myubuntuv-6f80096a-2497-4d23-851a-54413ae30e15')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/nyhq5avcfwkzgsalinuxvm32/blobServices/default/containers/bootdiagnostics-myubuntuv-6f80096a-2497-4d23-851a-54413ae30e15'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm32_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_nyhq5avcfwkzgsalinuxvm32_name'))]"
       ], 
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
       "properties": {
