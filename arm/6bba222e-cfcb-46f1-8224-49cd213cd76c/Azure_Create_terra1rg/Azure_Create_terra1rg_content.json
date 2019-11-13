@@ -1,0 +1,383 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "virtualMachines_terra1vm_name": {
+      "defaultValue": "terra1vm", 
+      "type": "String"
+    }, 
+    "virtualNetworks_testVnet_name": {
+      "defaultValue": "testVnet", 
+      "type": "String"
+    }, 
+    "actionGroups_CS_Actiongroup_name": {
+      "defaultValue": "CS-Actiongroup", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_testnsg_name": {
+      "defaultValue": "testnsg", 
+      "type": "String"
+    }, 
+    "networkInterfaces_testNIC_name": {
+      "defaultValue": "testNIC", 
+      "type": "String"
+    }, 
+    "storageAccounts_diag276f6bbed2562354_name": {
+      "defaultValue": "diag276f6bbed2562354", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2019-03-01", 
+      "location": "Global", 
+      "type": "microsoft.insights/actionGroups", 
+      "properties": {
+        "automationRunbookReceivers": [], 
+        "emailReceivers": [], 
+        "logicAppReceivers": [], 
+        "enabled": true, 
+        "itsmReceivers": [], 
+        "azureFunctionReceivers": [], 
+        "groupShortName": "HHPEAIVG", 
+        "smsReceivers": [], 
+        "azureAppPushReceivers": [], 
+        "voiceReceivers": [], 
+        "webhookReceivers": [
+          {
+            "serviceUri": "https://corestack-demo-functions.azurewebsites.net/api/HttpTrigger1?service_account_id=5dc98e1a765aa071bf9975f1&code=qes0aKoTJPpYfvcKgjt1TlJEZ0gFYYQdzL1eLeOsx25p4OqVJKuFFw%3D%3D&alert_type=monitoring", 
+            "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+            "useCommonAlertSchema": false
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/actionGroups/CS-Actiongroup'."
+    }, 
+    {
+      "name": "[parameters('networkSecurityGroups_testnsg_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "SSH", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "access": "Allow", 
+              "direction": "Inbound", 
+              "protocol": "Tcp", 
+              "destinationPortRanges": [], 
+              "priority": 1001, 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourceAddressPrefix": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourcePortRange": "*"
+            }
+          }, 
+          {
+            "name": "nodejs", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "access": "Allow", 
+              "direction": "Inbound", 
+              "protocol": "Tcp", 
+              "destinationPortRanges": [], 
+              "priority": 1002, 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "3000", 
+              "sourceAddressPrefix": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourcePortRange": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_testVnet_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "subnets": [
+          {
+            "name": "testSubnet", 
+            "properties": {
+              "addressPrefix": "10.0.1.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "serviceEndpoints": [], 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableVmProtection": false, 
+        "dhcpOptions": {
+          "dnsServers": []
+        }, 
+        "enableDdosProtection": false, 
+        "virtualNetworkPeerings": [], 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/virtualNetworks/testVnet'."
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_diag276f6bbed2562354_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-04-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": false, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }, 
+        "isHnsEnabled": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354'."
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_testnsg_name'), '/nodejs')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/nodejs'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "access": "Allow", 
+        "direction": "Inbound", 
+        "protocol": "Tcp", 
+        "destinationPortRanges": [], 
+        "priority": 1002, 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3000", 
+        "sourceAddressPrefix": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourcePortRange": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_testnsg_name'), '/SSH')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/SSH'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "access": "Allow", 
+        "direction": "Inbound", 
+        "protocol": "Tcp", 
+        "destinationPortRanges": [], 
+        "priority": 1001, 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "22", 
+        "sourceAddressPrefix": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourcePortRange": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_testVnet_name'), '/testSubnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/testSubnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_testVnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.1.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "serviceEndpoints": [], 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_diag276f6bbed2562354_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "name": "[parameters('virtualMachines_terra1vm_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-03-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testNIC_name'))]", 
+        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
+      ], 
+      "type": "Microsoft.Compute/virtualMachines", 
+      "properties": {
+        "hardwareProfile": {
+          "vmSize": "Standard_B1s"
+        }, 
+        "storageProfile": {
+          "imageReference": {
+            "sku": "18.04-LTS", 
+            "publisher": "Canonical", 
+            "version": "latest", 
+            "offer": "UbuntuServer"
+          }, 
+          "osDisk": {
+            "name": "myOsDisk", 
+            "writeAcceleratorEnabled": false, 
+            "managedDisk": {
+              "id": "[resourceId('Microsoft.Compute/disks', 'myOsDisk')]"
+            }, 
+            "osType": "Linux", 
+            "createOption": "FromImage", 
+            "caching": "ReadWrite"
+          }, 
+          "dataDisks": []
+        }, 
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testNIC_name'))]", 
+              "properties": {
+                "primary": false
+              }
+            }
+          ]
+        }, 
+        "osProfile": {
+          "adminUsername": "ubuntu", 
+          "secrets": [], 
+          "computerName": "[parameters('virtualMachines_terra1vm_name')]", 
+          "linuxConfiguration": {
+            "ssh": {
+              "publicKeys": [
+                {
+                  "path": "/home/ubuntu/.ssh/authorized_keys", 
+                  "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCb5Zk+2Qu/SAKtvD+YAo5R+SNAxtMZwhNnb/LK5ySmqzSTePkC5gn+5Q9Q8m74FEHlJcq3lHML8Ob5e8fYt6I5jM+I7yEMw3gbD531nSLVTq8C9MZOFh1JPkYpEKMn/z3jcXzNkGzYXyPjrtmvtFjc9aPNEPMQ3WzLxkxbIA29GBtazhrOYOmKYk41rPLz8dEW4pBph+yECuQ+E2c9gqyHFqwy9hQ1+rrtFr0TjFpT+vKNLvCkSminle0Jksb+YG5gauxjiwXrJF8VClkQrHE/v6fYaCks6frZTHhpESDuvLYON6WjLEeEnuUZ0nTMpz5nwXUJIVcIz0VX5AiKYhlL karthickk@corestack1085"
+                }
+              ]
+            }, 
+            "disablePasswordAuthentication": false, 
+            "provisionVMAgent": true
+          }, 
+          "allowExtensionOperations": true
+        }, 
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "storageUri": "[concat('https://', parameters('storageAccounts_diag276f6bbed2562354_name'), '.blob.core.windows.net/')]", 
+            "enabled": true
+          }
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Compute/virtualMachines/terra1vm'."
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_testNIC_name')]", 
+      "tags": {
+        "environment": "Terraform Demo"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_testVnet_name'), 'testSubnet')]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "enableAcceleratedNetworking": false, 
+        "dnsSettings": {
+          "dnsServers": []
+        }, 
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
+        }, 
+        "ipConfigurations": [
+          {
+            "name": "testNicConfiguration", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_testVnet_name'), 'testSubnet')]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "primary": true, 
+              "privateIPAddress": "10.0.1.4", 
+              "privateIPAddressVersion": "IPv4"
+            }
+          }
+        ], 
+        "enableIPForwarding": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkInterfaces/testNIC'."
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_diag276f6bbed2562354_name'), '/default/bootdiagnostics-terra1vm-d08f5fc0-9410-4255-a837-392400057164')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354/blobServices/default/containers/bootdiagnostics-terra1vm-d08f5fc0-9410-4255-a837-392400057164'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_diag276f6bbed2562354_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }
+  ]
+}
