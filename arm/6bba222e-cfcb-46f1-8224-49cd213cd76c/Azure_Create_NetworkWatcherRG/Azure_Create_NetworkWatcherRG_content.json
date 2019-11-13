@@ -1,0 +1,85 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "networkWatchers_NetworkWatcher_eastus_name": {
+      "defaultValue": "NetworkWatcher_eastus", 
+      "type": "String"
+    }, 
+    "virtualNetworks_testVnet_name": {
+      "defaultValue": "testVnet", 
+      "type": "String"
+    }, 
+    "networkWatchers_NetworkWatcher_eastasia_name": {
+      "defaultValue": "NetworkWatcher_eastasia", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('networkWatchers_NetworkWatcher_eastasia_name')]", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastasia'.", 
+      "apiVersion": "2019-09-01", 
+      "type": "Microsoft.Network/networkWatchers", 
+      "properties": {}, 
+      "location": "eastasia"
+    }, 
+    {
+      "name": "[parameters('networkWatchers_NetworkWatcher_eastus_name')]", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus'.", 
+      "apiVersion": "2019-09-01", 
+      "type": "Microsoft.Network/networkWatchers", 
+      "properties": {}, 
+      "location": "eastus"
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_testVnet_name')]", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/virtualNetworks/testVnet'.", 
+      "apiVersion": "2019-09-01", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "subnets": [
+          {
+            "name": "testSubnet", 
+            "properties": {
+              "addressPrefix": "10.0.1.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "serviceEndpoints": [], 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableVmProtection": false, 
+        "dhcpOptions": {
+          "dnsServers": []
+        }, 
+        "enableDdosProtection": false, 
+        "virtualNetworkPeerings": [], 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }
+      }, 
+      "location": "eastus"
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_testVnet_name'), '/testSubnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/testSubnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_testVnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.1.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "serviceEndpoints": [], 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }
+  ]
+}
