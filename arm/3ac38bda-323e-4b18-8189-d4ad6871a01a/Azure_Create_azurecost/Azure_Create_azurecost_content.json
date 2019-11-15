@@ -7,13 +7,6 @@
       "defaultValue": "Leo-dataase2pls-data-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "metricAlerts_Whenever_20the_20disk_20read_20bytes_20is_20greater_20than_20dynamic_20thresholds_name": {
-      "defaultValue": "Whenever%20the%20disk%20read%20bytes%20is%20greater%20than%20dynamic%20thresholds", 
-      "type": "String"
-    }, 
-    "metricAlerts_naveentests_description": {
-      "type": "SecureString"
-    }, 
     "actionGroups_naveenalert_externalid": {
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/actionGroups/naveenalert", 
       "type": "String"
@@ -25,29 +18,6 @@
     "networkInterfaces_devtestnaveen773_name": {
       "defaultValue": "devtestnaveen773", 
       "type": "String"
-    }, 
-    "metricAlerts_Whenever_20the_20network_20out_20billable_20is_20greater_20than_20dynamic_20thresholds_name": {
-      "defaultValue": "Whenever%20the%20network%20out%20billable%20is%20greater%20than%20dynamic%20thresholds", 
-      "type": "String"
-    }, 
-    "metricAlerts_naveentests_name": {
-      "defaultValue": "naveentests", 
-      "type": "String"
-    }, 
-    "metricAlerts_naveentyestaler_name": {
-      "defaultValue": "naveentyestaler", 
-      "type": "String"
-    }, 
-    "metricAlerts_Whenever_20the_20disk_20write_20bytes_20is_20greater_20than_20dynamic_20thresholds_name": {
-      "defaultValue": "Whenever%20the%20disk%20write%20bytes%20is%20greater%20than%20dynamic%20thresholds", 
-      "type": "String"
-    }, 
-    "metricAlerts_test_alert_rule_for_azure_mv_name": {
-      "defaultValue": "test_alert_rule_for_azure_mv", 
-      "type": "String"
-    }, 
-    "metricAlerts_test_alert_rule_for_azure_mv_description": {
-      "type": "SecureString"
     }, 
     "activityLogAlerts_CS_Actiongroup_delete_name": {
       "defaultValue": "CS-Actiongroup-delete", 
@@ -65,16 +35,12 @@
       "defaultValue": "test-act-grp", 
       "type": "String"
     }, 
-    "metricAlerts_nv_test_Alerr_name": {
-      "defaultValue": "nv_test_Alerr", 
-      "type": "String"
-    }, 
     "servers_testsqlservercedatabasesdataase2_externalid": {
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdataase2", 
       "type": "String"
     }, 
-    "metricAlerts_ntesttalert_name": {
-      "defaultValue": "ntesttalert", 
+    "activityLogAlerts_Leo_database1azn_data_io_percentage_AZSQ_name": {
+      "defaultValue": "Leo-database1azn-data-io-percentage-AZSQ", 
       "type": "String"
     }, 
     "activityLogAlerts_Leo_database1final_data_io_percentage_AZSQ_name": {
@@ -89,43 +55,25 @@
       "defaultValue": "Leo-dataase2plss-data-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "metricAlerts_Whenever_20the_20cpu_20credits_20consumed_20is_20greater_20than_20dynamic_20thresholds_name": {
-      "defaultValue": "Whenever%20the%20cpu%20credits%20consumed%20is%20greater%20than%20dynamic%20thresholds", 
-      "type": "String"
-    }, 
     "activityLogAlerts_Leo_dataase2azn_data_io_percentage_AZSQ_name": {
       "defaultValue": "Leo-dataase2azn-data-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "virtualMachines_testvm_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Compute/virtualMachines/testvm", 
-      "type": "String"
-    }, 
-    "networkSecurityGroups_devtestnaveen_nsg_name": {
-      "defaultValue": "devtestnaveen-nsg", 
-      "type": "String"
-    }, 
-    "virtualMachines_testvm1_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Compute/virtualMachines/testvm1", 
+    "virtualNetworks_azurecost_vnet_name": {
+      "defaultValue": "azurecost-vnet", 
       "type": "String"
     }, 
     "servers_testsqlserverce_externalid": {
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Sql/servers/testsqlserverce", 
       "type": "String"
     }, 
-    "metricAlerts_testalerttulr_description": {
-      "type": "SecureString"
-    }, 
-    "metricAlerts_Percentange_20CPU_20Greater_20than_2090_name": {
-      "defaultValue": "Percentange%20CPU%20Greater%20than%2090", 
+    "activityLogAlerts_Alert_For_Recovery_Vault_Backup_Restore_Failure_name": {
+      "defaultValue": "Alert_For_Recovery_Vault_Backup_Restore_Failure", 
       "type": "String"
     }, 
-    "metricAlerts_corestackrgalert_name": {
-      "defaultValue": "corestackrgalert", 
+    "activityLogAlerts_naveenalert_create_name": {
+      "defaultValue": "naveenalert-create", 
       "type": "String"
-    }, 
-    "metricAlerts_naveentyestaler_description": {
-      "type": "SecureString"
     }, 
     "activityLogAlerts_Leo_dataase2final_data_io_percentage_AZSQ_name": {
       "defaultValue": "Leo-dataase2final-data-io-percentage-AZSQ", 
@@ -135,20 +83,8 @@
       "defaultValue": "Leo-database1pls-data-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "actionGroups_CS_Actiongroup_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/actionGroups/CS-Actiongroup", 
-      "type": "String"
-    }, 
-    "metricAlerts_testtmetriicaleret_name": {
-      "defaultValue": "testtmetriicaleret", 
-      "type": "String"
-    }, 
     "storageAccounts_azurecostdiag_name": {
       "defaultValue": "azurecostdiag", 
-      "type": "String"
-    }, 
-    "namespaces_cstestsbus_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.ServiceBus/namespaces/cstestsbus", 
       "type": "String"
     }, 
     "actionGroups_cstestrg_alert_externalid": {
@@ -159,71 +95,32 @@
       "defaultValue": "CS-Alert-Actiongroup", 
       "type": "String"
     }, 
-    "metricAlerts_testalerttulr_name": {
-      "defaultValue": "testalerttulr", 
-      "type": "String"
-    }, 
     "activityLogAlerts_Leo_database1azure_data_io_percentage_AZSQ_name": {
       "defaultValue": "Leo-database1azure-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "virtualMachines_testvm2_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/sandbox_rg/providers/Microsoft.Compute/virtualMachines/testvm2", 
       "type": "String"
     }, 
     "activityLogAlerts_test_sql_alert_6_name": {
       "defaultValue": "test_sql_alert_6", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_database1azn_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1azn-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "actiongroups_test_action_group_for_azure_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurebackuprg_eastus2_1/providers/microsoft.insights/actiongroups/test_action_group_for_azure", 
-      "type": "String"
-    }, 
-    "metricAlerts_servicenbustets_name": {
-      "defaultValue": "servicenbustets", 
-      "type": "String"
-    }, 
-    "metricAlerts_naveen_tstr_description": {
-      "type": "SecureString"
-    }, 
-    "metricAlerts_Whenever_20the_20disk_20read_20operations_20sec_20is_20greater_20than_20dynamic_20thresholds_name": {
-      "defaultValue": "Whenever%20the%20disk%20read%20operations%20sec%20is%20greater%20than%20dynamic%20thresholds", 
-      "type": "String"
-    }, 
     "activityLogAlerts_testtaalertrulke1_name": {
       "defaultValue": "testtaalertrulke1", 
       "type": "String"
     }, 
-    "metricAlerts_lastaletr_name": {
-      "defaultValue": "lastaletr", 
-      "type": "String"
-    }, 
-    "metricAlerts_navetestalkert_name": {
-      "defaultValue": "navetestalkert", 
-      "type": "String"
-    }, 
-    "virtualNetworks_azurecost_vnet_name": {
-      "defaultValue": "azurecost-vnet", 
+    "networkSecurityGroups_devtestnaveen_nsg_name": {
+      "defaultValue": "devtestnaveen-nsg", 
       "type": "String"
     }, 
     "activityLogAlerts_Leo_database1plss_data_io_percentage_AZSQ_name": {
       "defaultValue": "Leo-database1plss-data-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "metricAlerts_naveen_tstr_name": {
-      "defaultValue": "naveen_tstr", 
+    "actionGroups_CS_Actiongroup_externalid": {
+      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/actionGroups/CS-Actiongroup", 
       "type": "String"
     }, 
     "virtualMachines_devtestnaveen_name": {
       "defaultValue": "devtestnaveen", 
-      "type": "String"
-    }, 
-    "metricAlerts_Whenever_20the_20network_20in_20billable_20is_20greater_20than_20dynamic_20thresholds_name": {
-      "defaultValue": "Whenever%20the%20network%20in%20billable%20is%20greater%20than%20dynamic%20thresholds", 
       "type": "String"
     }, 
     "activityLogAlerts_Leo_database1azt_data_io_percentage_AZSQ_name": {
@@ -232,10 +129,6 @@
     }, 
     "servers_testsqlservercedatabasesdatabase1_externalid": {
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdatabase1", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_naveenalert_create_name": {
-      "defaultValue": "naveenalert-create", 
       "type": "String"
     }, 
     "activityLogAlerts_Leo_dataase2_data_io_percentage_AZSQ_name": {
@@ -250,10 +143,6 @@
       "defaultValue": "Leo-dataase2azure-data-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "metricAlerts_Whenever_20the_20cpu_20credits_20remaining_20is_20greater_20than_20dynamic_20thresholds_name": {
-      "defaultValue": "Whenever%20the%20cpu%20credits%20remaining%20is%20greater%20than%20dynamic%20thresholds", 
-      "type": "String"
-    }, 
     "vaults_vault964_name": {
       "defaultValue": "vault964", 
       "type": "String"
@@ -264,14 +153,6 @@
     }, 
     "activityLogAlerts_Leo_dataase2azt_data_io_percentage_AZSQ_name": {
       "defaultValue": "Leo-dataase2azt-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Alert_For_Recovery_Vault_Backup_Restore_Failure_name": {
-      "defaultValue": "Alert_For_Recovery_Vault_Backup_Restore_Failure", 
-      "type": "String"
-    }, 
-    "metricAlerts_Whenever_20the_20disk_20write_20operations_20sec_20is_20greater_20than_20dynamic_20threshold_name": {
-      "defaultValue": "Whenever%20the%20disk%20write%20operations%20sec%20is%20greater%20than%20dynamic%20threshold", 
       "type": "String"
     }, 
     "disks_devtestnaveen_OsDisk_1_201c0b7e36dd4432b50b8a72be536a4c_name": {
@@ -1188,356 +1069,6 @@
       "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/test-act-grp'."
     }, 
     {
-      "name": "[parameters('metricAlerts_naveen_tstr_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "microsoft.insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('virtualMachines_testvm1_externalid')]"
-        ], 
-        "severity": 2, 
-        "description": "[parameters('metricAlerts_naveen_tstr_description')]", 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "webHookProperties": {}, 
-            "actionGroupId": "[parameters('actiongroups_test_action_group_for_azure_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/naveen_tstr'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_naveentests_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "microsoft.insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('namespaces_cstestsbus_externalid')]"
-        ], 
-        "severity": 3, 
-        "description": "[parameters('metricAlerts_naveentests_description')]", 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/naveentests'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_naveentyestaler_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "microsoft.insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('namespaces_cstestsbus_externalid')]"
-        ], 
-        "severity": 3, 
-        "description": "[parameters('metricAlerts_naveentyestaler_description')]", 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "webHookProperties": {}, 
-            "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/naveentyestaler'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_test_alert_rule_for_azure_mv_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "microsoft.insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('virtualMachines_testvm_externalid')]"
-        ], 
-        "severity": 3, 
-        "description": "[parameters('metricAlerts_test_alert_rule_for_azure_mv_description')]", 
-        "enabled": false, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "webHookProperties": {}, 
-            "actionGroupId": "[parameters('actiongroups_test_action_group_for_azure_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/test_alert_rule_for_azure_mv'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_testalerttulr_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "microsoft.insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('virtualMachines_testvm_externalid')]"
-        ], 
-        "severity": 2, 
-        "description": "[parameters('metricAlerts_testalerttulr_description')]", 
-        "enabled": true, 
-        "windowSize": "PT1M", 
-        "actions": [
-          {
-            "webHookProperties": {}, 
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/testalerttulr'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Percentange_20CPU_20Greater_20than_2090_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT30M", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Percentange%20CPU%20Greater%20than%2090'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20cpu_20credits_20consumed_20is_20greater_20than_20dynamic_20thresholds_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20cpu%20credits%20consumed%20is%20greater%20than%20dynamic%20thresholds'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20cpu_20credits_20remaining_20is_20greater_20than_20dynamic_20thresholds_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20cpu%20credits%20remaining%20is%20greater%20than%20dynamic%20thresholds'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20disk_20read_20bytes_20is_20greater_20than_20dynamic_20thresholds_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20disk%20read%20bytes%20is%20greater%20than%20dynamic%20thresholds'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20disk_20read_20operations_20sec_20is_20greater_20than_20dynamic_20thresholds_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20disk%20read%20operations%20sec%20is%20greater%20than%20dynamic%20thresholds'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20disk_20write_20bytes_20is_20greater_20than_20dynamic_20thresholds_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20disk%20write%20bytes%20is%20greater%20than%20dynamic%20thresholds'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20disk_20write_20operations_20sec_20is_20greater_20than_20dynamic_20threshold_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20disk%20write%20operations%20sec%20is%20greater%20than%20dynamic%20threshold'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20network_20in_20billable_20is_20greater_20than_20dynamic_20thresholds_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20network%20in%20billable%20is%20greater%20than%20dynamic%20thresholds'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_Whenever_20the_20network_20out_20billable_20is_20greater_20than_20dynamic_20thresholds_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "Request body for creating metric alert.", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT1H", 
-        "actions": [
-          {
-            "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT15M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/metricAlerts/Whenever%20the%20network%20out%20billable%20is%20greater%20than%20dynamic%20thresholds'."
-    }, 
-    {
       "name": "[parameters('networkSecurityGroups_devtestnaveen_nsg_name')]", 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
@@ -1795,204 +1326,6 @@
         "description": "tets"
       }, 
       "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/testtaalertrulke1'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_corestackrgalert_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "dependsOn": [
-        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Alert_Actiongroup_name'))]"
-      ], 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('virtualMachines_testvm1_externalid')]", 
-          "[parameters('virtualMachines_testvm2_externalid')]"
-        ], 
-        "description": "This is a metric alert", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "webHookProperties": {}, 
-            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Alert_Actiongroup_name'))]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.Insights/metricAlerts/corestackrgalert'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_lastaletr_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "dependsOn": [
-        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-      ], 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('namespaces_cstestsbus_externalid')]"
-        ], 
-        "description": "This is a metric alert", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.Insights/metricAlerts/lastaletr'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_navetestalkert_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "dependsOn": [
-        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-      ], 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('namespaces_cstestsbus_externalid')]"
-        ], 
-        "description": "This is a metric alert", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.Insights/metricAlerts/navetestalkert'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_ntesttalert_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "dependsOn": [
-        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-      ], 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('namespaces_cstestsbus_externalid')]"
-        ], 
-        "description": "This is a metric alert", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.Insights/metricAlerts/ntesttalert'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_nv_test_Alerr_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "dependsOn": [
-        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Alert_Actiongroup_name'))]"
-      ], 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost"
-        ], 
-        "description": "This is a metric alert", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Alert_Actiongroup_name'))]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.Insights/metricAlerts/nv_test_Alerr'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_servicenbustets_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "dependsOn": [
-        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-      ], 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('namespaces_cstestsbus_externalid')]"
-        ], 
-        "description": "This is a metric alert", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.Insights/metricAlerts/servicenbustets'."
-    }, 
-    {
-      "name": "[parameters('metricAlerts_testtmetriicaleret_name')]", 
-      "apiVersion": "2018-03-01", 
-      "location": "global", 
-      "dependsOn": [
-        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-      ], 
-      "type": "Microsoft.Insights/metricAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('namespaces_cstestsbus_externalid')]"
-        ], 
-        "description": "This is a metric alert", 
-        "severity": 3, 
-        "enabled": true, 
-        "windowSize": "PT5M", 
-        "actions": [
-          {
-            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Queue_Monitoring_name'))]"
-          }
-        ], 
-        "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
-        }, 
-        "evaluationFrequency": "PT1M"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.Insights/metricAlerts/testtmetriicaleret'."
     }, 
     {
       "name": "[concat(parameters('networkSecurityGroups_devtestnaveen_nsg_name'), '/RDP')]", 
