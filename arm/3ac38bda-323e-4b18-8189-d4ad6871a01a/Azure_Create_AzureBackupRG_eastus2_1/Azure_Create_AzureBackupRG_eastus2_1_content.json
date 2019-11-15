@@ -7,6 +7,10 @@
       "defaultValue": "Leo-testtssql-testsqldb1-workers-percentage-AZSQ", 
       "type": "String"
     }, 
+    "metricAlerts_Leo_testtssql_sqldb2_cpu_percentage_AZSQ_name": {
+      "defaultValue": "Leo-testtssql-sqldb2-cpu-percentage-AZSQ", 
+      "type": "String"
+    }, 
     "servers_testtssql_externalid": {
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Sql/servers/testtssql", 
       "type": "String"
@@ -27,8 +31,9 @@
       "defaultValue": "Leo-testtssql-testsqldb1-data-space-used-percent-AZSQ", 
       "type": "String"
     }, 
-    "metricAlerts_Leo_testtssql_testsqldb1_sessions_percentage_AZSQ_description": {
-      "type": "SecureString"
+    "metricAlerts_Leo_testtssql_testsqldb1_failed_connection_AZSQ_name": {
+      "defaultValue": "Leo-testtssql-testsqldb1-failed-connection-AZSQ", 
+      "type": "String"
     }, 
     "metricAlerts_Leo_testtssql_testsqldb1_log_io_percentage_AZSQ_description": {
       "type": "SecureString"
@@ -41,8 +46,9 @@
       "defaultValue": "Leo-testtssql-sqldb2-log-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "metricAlerts_Leo_testtssql_testsqldb1_failed_connection_AZSQ_description": {
-      "type": "SecureString"
+    "activityLogAlerts_Leo_testtssql_sqldb2_delete_database_AZSQ_name": {
+      "defaultValue": "Leo-testtssql-sqldb2-delete-database-AZSQ", 
+      "type": "String"
     }, 
     "activityLogAlerts_Leo_testtssql_testsqldb1_delete_database_AZSQ_name": {
       "defaultValue": "Leo-testtssql-testsqldb1-delete-database-AZSQ", 
@@ -69,15 +75,18 @@
       "defaultValue": "Leo-testtssql-testsqldb1-sessions-percentage-AZSQ", 
       "type": "String"
     }, 
+    "metricAlerts_Leo_testtssql_testsqldb1_cpu_percentage_AZSQ_name": {
+      "defaultValue": "Leo-testtssql-testsqldb1-cpu-percentage-AZSQ", 
+      "type": "String"
+    }, 
     "metricAlerts_Leo_testtssql_testsqldb1_cpu_percentage_AZSQ_description": {
       "type": "SecureString"
     }, 
     "metricAlerts_Leo_testtssql_testsqldb1_data_io_percentage_AZSQ_description": {
       "type": "SecureString"
     }, 
-    "metricAlerts_Leo_testtssql_sqldb2_cpu_percentage_AZSQ_name": {
-      "defaultValue": "Leo-testtssql-sqldb2-cpu-percentage-AZSQ", 
-      "type": "String"
+    "metricAlerts_Leo_testtssql_sqldb2_data_io_percentage_AZSQ_description": {
+      "type": "SecureString"
     }, 
     "metricAlerts_Leo_testtssql_sqldb2_sessions_percentage_AZSQ_description": {
       "type": "SecureString"
@@ -97,9 +106,8 @@
       "defaultValue": "Leo-testtssql-testsqldb1-log-io-percentage-AZSQ", 
       "type": "String"
     }, 
-    "metricAlerts_Leo_testtssql_testsqldb1_cpu_percentage_AZSQ_name": {
-      "defaultValue": "Leo-testtssql-testsqldb1-cpu-percentage-AZSQ", 
-      "type": "String"
+    "metricAlerts_Leo_testtssql_sqldb2_failed_connection_AZSQ_description": {
+      "type": "SecureString"
     }, 
     "metricAlerts_Leo_testtssql_sqldb2_dtu_percentage_AZSQ_description": {
       "type": "SecureString"
@@ -117,31 +125,23 @@
     "metricAlerts_Leo_testtssql_sqldb2_workers_percentage_AZSQ_description": {
       "type": "SecureString"
     }, 
-    "metricAlerts_Leo_testtssql_sqldb2_failed_connection_AZSQ_description": {
-      "type": "SecureString"
-    }, 
-    "metricAlerts_Leo_testtssql_sqldb2_data_io_percentage_AZSQ_description": {
-      "type": "SecureString"
-    }, 
     "actionGroups_CS_Alert_Actiongroup_externalid": {
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus_1/providers/microsoft.insights/actionGroups/CS-Alert-Actiongroup", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_testtssql_testsqldb1_create_database_AZSQ_name": {
-      "defaultValue": "Leo-testtssql-testsqldb1-create-database-AZSQ", 
-      "type": "String"
-    }, 
-    "metricAlerts_Leo_testtssql_testsqldb1_failed_connection_AZSQ_name": {
-      "defaultValue": "Leo-testtssql-testsqldb1-failed-connection-AZSQ", 
       "type": "String"
     }, 
     "metricAlerts_Leo_testtssql_testsqldb1_dtu_percentage_AZSQ_name": {
       "defaultValue": "Leo-testtssql-testsqldb1-dtu-percentage-AZSQ", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_testtssql_sqldb2_delete_database_AZSQ_name": {
-      "defaultValue": "Leo-testtssql-sqldb2-delete-database-AZSQ", 
+    "activityLogAlerts_Leo_testtssql_testsqldb1_create_database_AZSQ_name": {
+      "defaultValue": "Leo-testtssql-testsqldb1-create-database-AZSQ", 
       "type": "String"
+    }, 
+    "metricAlerts_Leo_testtssql_testsqldb1_sessions_percentage_AZSQ_description": {
+      "type": "SecureString"
+    }, 
+    "metricAlerts_Leo_testtssql_testsqldb1_failed_connection_AZSQ_description": {
+      "type": "SecureString"
     }, 
     "metricAlerts_Leo_testtssql_testsqldb1_data_io_percentage_AZSQ_name": {
       "defaultValue": "Leo-testtssql-testsqldb1-data-io-percentage-AZSQ", 
@@ -151,8 +151,8 @@
   "resources": [
     {
       "name": "[parameters('actionGroups_test_action_group_for_azure_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurebackuprg_eastus2_1/providers/microsoft.insights/actionGroups/test_action_group_for_azure'.", 
       "apiVersion": "2019-03-01", 
+      "location": "Global", 
       "type": "microsoft.insights/actionGroups", 
       "properties": {
         "automationRunbookReceivers": [], 
@@ -173,18 +173,25 @@
         "voiceReceivers": [], 
         "webhookReceivers": []
       }, 
-      "location": "Global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurebackuprg_eastus2_1/providers/microsoft.insights/actionGroups/test_action_group_for_azure'."
     }, 
     {
       "name": "[parameters('activityLogAlerts_Leo_testtssql_sqldb2_create_database_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-sqldb2-create-database-AZSQ'.", 
       "apiVersion": "2017-04-01", 
+      "location": "Global", 
       "type": "microsoft.insights/activityLogAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "enabled": true, 
+        "actions": {
+          "actionGroups": [
+            {
+              "actionGroupId": "[parameters('actionGroups_CS_Alert_Actiongroup_externalid')]"
+            }
+          ]
+        }, 
         "condition": {
           "allOf": [
             {
@@ -201,27 +208,27 @@
             }
           ]
         }, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Alert_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
         "description": "Alert which will be created during the azure sql database creation/updation"
       }, 
-      "location": "Global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-sqldb2-create-database-AZSQ'."
     }, 
     {
       "name": "[parameters('activityLogAlerts_Leo_testtssql_sqldb2_delete_database_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-sqldb2-delete-database-AZSQ'.", 
       "apiVersion": "2017-04-01", 
+      "location": "Global", 
       "type": "microsoft.insights/activityLogAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "enabled": true, 
+        "actions": {
+          "actionGroups": [
+            {
+              "actionGroupId": "[parameters('actionGroups_CS_Alert_Actiongroup_externalid')]"
+            }
+          ]
+        }, 
         "condition": {
           "allOf": [
             {
@@ -238,6 +245,20 @@
             }
           ]
         }, 
+        "description": "Alert which will be created during the azure sql database deletion"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-sqldb2-delete-database-AZSQ'."
+    }, 
+    {
+      "name": "[parameters('activityLogAlerts_Leo_testtssql_testsqldb1_create_database_AZSQ_name')]", 
+      "apiVersion": "2017-04-01", 
+      "location": "Global", 
+      "type": "microsoft.insights/activityLogAlerts", 
+      "properties": {
+        "scopes": [
+          "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
+        ], 
+        "enabled": true, 
         "actions": {
           "actionGroups": [
             {
@@ -245,20 +266,6 @@
             }
           ]
         }, 
-        "description": "Alert which will be created during the azure sql database deletion"
-      }, 
-      "location": "Global"
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_testtssql_testsqldb1_create_database_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-testsqldb1-create-database-AZSQ'.", 
-      "apiVersion": "2017-04-01", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
-        ], 
-        "enabled": true, 
         "condition": {
           "allOf": [
             {
@@ -275,6 +282,20 @@
             }
           ]
         }, 
+        "description": "Alert which will be created during the azure sql database creation/updation"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-testsqldb1-create-database-AZSQ'."
+    }, 
+    {
+      "name": "[parameters('activityLogAlerts_Leo_testtssql_testsqldb1_delete_database_AZSQ_name')]", 
+      "apiVersion": "2017-04-01", 
+      "location": "Global", 
+      "type": "microsoft.insights/activityLogAlerts", 
+      "properties": {
+        "scopes": [
+          "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
+        ], 
+        "enabled": true, 
         "actions": {
           "actionGroups": [
             {
@@ -282,20 +303,6 @@
             }
           ]
         }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "location": "Global"
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_testtssql_testsqldb1_delete_database_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-testsqldb1-delete-database-AZSQ'.", 
-      "apiVersion": "2017-04-01", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
-        ], 
-        "enabled": true, 
         "condition": {
           "allOf": [
             {
@@ -312,27 +319,21 @@
             }
           ]
         }, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Alert_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
         "description": "Alert which will be created during the azure sql database deletion"
       }, 
-      "location": "Global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/microsoft.insights/activityLogAlerts/Leo-testtssql-testsqldb1-delete-database-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_cpu_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-cpu-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_cpu_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -343,21 +344,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_cpu_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-cpu-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_data_io_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-data-io-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_data_io_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -368,21 +369,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_data_io_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-data-io-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_data_space_used_percent_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-data-space-used-percent-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_data_space_used_percent_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -393,21 +394,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_data_space_used_percent_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-data-space-used-percent-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_dtu_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-dtu-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_dtu_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -418,21 +419,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_dtu_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-dtu-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_failed_connection_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-failed-connection-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_failed_connection_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -443,21 +444,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_failed_connection_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-failed-connection-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_log_io_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-log-io-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_log_io_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -468,21 +469,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_log_io_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-log-io-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_sessions_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-sessions-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_sessions_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -493,21 +494,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_sessions_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-sessions-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_sqldb2_workers_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-workers-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/sqldb2')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_workers_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -518,21 +519,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_sqldb2_workers_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-sqldb2-workers-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_cpu_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-cpu-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_cpu_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -543,21 +544,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_cpu_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-cpu-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_data_io_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-data-io-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_data_io_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -568,21 +569,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_data_io_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-data-io-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_data_space_used_percent_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-data-space-used-percent-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_data_space_used_percent_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -593,21 +594,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_data_space_used_percent_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-data-space-used-percent-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_dtu_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-dtu-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_dtu_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -618,21 +619,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_dtu_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-dtu-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_failed_connection_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-failed-connection-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_failed_connection_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -643,21 +644,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_failed_connection_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-failed-connection-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_log_io_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-log-io-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_log_io_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -668,21 +669,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_log_io_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-log-io-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_sessions_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-sessions-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_sessions_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -693,21 +694,21 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_sessions_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-sessions-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_workers_percentage_AZSQ_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-workers-percentage-AZSQ'.", 
       "apiVersion": "2018-03-01", 
+      "location": "global", 
       "type": "Microsoft.Insights/metricAlerts", 
       "properties": {
         "scopes": [
           "[concat(parameters('servers_testtssql_externalid'), '/databases/testsqldb1')]"
         ], 
         "severity": 3, 
+        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_workers_percentage_AZSQ_description')]", 
         "enabled": true, 
         "windowSize": "PT15M", 
         "actions": [
@@ -718,10 +719,9 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT5M", 
-        "description": "[parameters('metricAlerts_Leo_testtssql_testsqldb1_workers_percentage_AZSQ_description')]"
+        "evaluationFrequency": "PT5M"
       }, 
-      "location": "global"
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Insights/metricAlerts/Leo-testtssql-testsqldb1-workers-percentage-AZSQ'."
     }, 
     {
       "name": "[parameters('virtualNetworks_AzureBackupRG_eastus2_1_vnet_name')]", 
@@ -744,12 +744,12 @@
             }
           }
         ], 
+        "enableDdosProtection": false, 
         "addressSpace": {
           "addressPrefixes": [
             "10.0.1.0/24"
           ]
         }, 
-        "enableDdosProtection": false, 
         "enableVmProtection": false
       }, 
       "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus2_1/providers/Microsoft.Network/virtualNetworks/AzureBackupRG_eastus2_1-vnet'."
