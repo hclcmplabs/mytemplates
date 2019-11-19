@@ -1,0 +1,304 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "storageAccounts_teststorageabc_name": {
+      "defaultValue": "teststorageabc", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_testvm_nsg_name": {
+      "defaultValue": "testvm-nsg", 
+      "type": "String"
+    }, 
+    "virtualMachines_testvm_name": {
+      "defaultValue": "testvm", 
+      "type": "String"
+    }, 
+    "virtualNetworks_test_rg_vnet_name": {
+      "defaultValue": "test_rg-vnet", 
+      "type": "String"
+    }, 
+    "networkInterfaces_testvm5_name": {
+      "defaultValue": "testvm5", 
+      "type": "String"
+    }, 
+    "publicIPAddresses_testvm_ip_name": {
+      "defaultValue": "testvm-ip", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('networkSecurityGroups_testvm_nsg_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "SSH", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 300, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Network/networkSecurityGroups/testvm-nsg'."
+    }, 
+    {
+      "sku": {
+        "name": "Basic"
+      }, 
+      "name": "[parameters('publicIPAddresses_testvm_ip_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/publicIPAddresses", 
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic", 
+        "publicIPAddressVersion": "IPv4", 
+        "ipAddress": "104.45.145.169", 
+        "idleTimeoutInMinutes": 4, 
+        "ipTags": []
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Network/publicIPAddresses/testvm-ip'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_test_rg_vnet_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "default", 
+            "properties": {
+              "addressPrefix": "10.0.0.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableDdosProtection": false, 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/24"
+          ]
+        }, 
+        "enableVmProtection": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Network/virtualNetworks/test_rg-vnet'."
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_teststorageabc_name')]", 
+      "apiVersion": "2019-04-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": true, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Storage/storageAccounts/teststorageabc'."
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_testvm_nsg_name'), '/SSH')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Network/networkSecurityGroups/testvm-nsg/securityRules/SSH'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testvm_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 300, 
+        "direction": "Inbound", 
+        "protocol": "TCP", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "22", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_test_rg_vnet_name'), '/default')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Network/virtualNetworks/test_rg-vnet/subnets/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_test_rg_vnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.0.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_teststorageabc_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Storage/storageAccounts/teststorageabc/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_teststorageabc_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "name": "[parameters('virtualMachines_testvm_name')]", 
+      "apiVersion": "2019-03-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testvm5_name'))]", 
+        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_teststorageabc_name'))]"
+      ], 
+      "type": "Microsoft.Compute/virtualMachines", 
+      "properties": {
+        "hardwareProfile": {
+          "vmSize": "Standard_B1ls"
+        }, 
+        "storageProfile": {
+          "imageReference": {
+            "sku": "18.04-LTS", 
+            "publisher": "Canonical", 
+            "version": "latest", 
+            "offer": "UbuntuServer"
+          }, 
+          "osDisk": {
+            "name": "[concat(parameters('virtualMachines_testvm_name'), '_disk1_75fbb49ba50c4dcc807fdb84ca1b78e4')]", 
+            "diskSizeGB": 30, 
+            "managedDisk": {
+              "storageAccountType": "Premium_LRS", 
+              "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_testvm_name'), '_disk1_75fbb49ba50c4dcc807fdb84ca1b78e4'))]"
+            }, 
+            "caching": "ReadWrite", 
+            "createOption": "FromImage", 
+            "osType": "Linux"
+          }, 
+          "dataDisks": []
+        }, 
+        "osProfile": {
+          "adminUsername": "testadmin", 
+          "secrets": [], 
+          "computerName": "[parameters('virtualMachines_testvm_name')]", 
+          "linuxConfiguration": {
+            "provisionVMAgent": true, 
+            "disablePasswordAuthentication": false
+          }, 
+          "allowExtensionOperations": true
+        }, 
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "storageUri": "[concat('https://', parameters('storageAccounts_teststorageabc_name'), '.blob.core.windows.net/')]", 
+            "enabled": true
+          }
+        }, 
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testvm5_name'))]"
+            }
+          ]
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Compute/virtualMachines/testvm'."
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_teststorageabc_name'), '/default/bootdiagnostics-testvm-405aa14e-5cfd-4191-946c-ad4f754c8512')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Storage/storageAccounts/teststorageabc/blobServices/default/containers/bootdiagnostics-testvm-405aa14e-5cfd-4191-946c-ad4f754c8512'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_teststorageabc_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_teststorageabc_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_testvm5_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_testvm_ip_name'))]", 
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_test_rg_vnet_name'), 'default')]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testvm_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testvm_nsg_name'))]"
+        }, 
+        "enableIPForwarding": false, 
+        "dnsSettings": {
+          "dnsServers": []
+        }, 
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_test_rg_vnet_name'), 'default')]"
+              }, 
+              "primary": true, 
+              "privateIPAddressVersion": "IPv4", 
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_testvm_ip_name'))]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "privateIPAddress": "10.0.0.4"
+            }
+          }
+        ], 
+        "enableAcceleratedNetworking": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/test_rg/providers/Microsoft.Network/networkInterfaces/testvm5'."
+    }
+  ]
+}
