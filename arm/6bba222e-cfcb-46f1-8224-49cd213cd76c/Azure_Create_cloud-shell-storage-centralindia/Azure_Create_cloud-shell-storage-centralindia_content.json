@@ -1,0 +1,174 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "metricAlerts_CS_UsedCapacity_csg6bba222ecfcbx46f1x822_a99e5_name": {
+      "defaultValue": "CS-UsedCapacity-csg6bba222ecfcbx46f1x822-a99e5", 
+      "type": "String"
+    }, 
+    "actionGroups_CS_Actiongroup_name": {
+      "defaultValue": "CS-Actiongroup", 
+      "type": "String"
+    }, 
+    "storageAccounts_csg6bba222ecfcbx46f1x822_name": {
+      "defaultValue": "csg6bba222ecfcbx46f1x822", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Availability_csg6bba222ecfcbx46f1x822_a99e5_name": {
+      "defaultValue": "CS-Availability-csg6bba222ecfcbx46f1x822-a99e5", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+      "tags": {
+        "environment": "Development", 
+        "corestack-system-manage": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2019-03-01", 
+      "location": "Global", 
+      "type": "microsoft.insights/actionGroups", 
+      "properties": {
+        "automationRunbookReceivers": [], 
+        "emailReceivers": [], 
+        "logicAppReceivers": [], 
+        "enabled": true, 
+        "itsmReceivers": [], 
+        "azureFunctionReceivers": [], 
+        "groupShortName": "TURXGSUJ", 
+        "smsReceivers": [], 
+        "azureAppPushReceivers": [], 
+        "voiceReceivers": [], 
+        "webhookReceivers": [
+          {
+            "serviceUri": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5dd39138765aa03095167730&alert_type=monitoring", 
+            "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+            "useCommonAlertSchema": false
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/microsoft.insights/actionGroups/CS-Actiongroup'."
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "StorageV2", 
+      "name": "[parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name')]", 
+      "apiVersion": "2019-04-01", 
+      "location": "centralindia", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": true, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }, 
+        "accessTier": "Hot"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/csg6bba222ecfcbx46f1x822'."
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/csg6bba222ecfcbx46f1x822/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Availability_csg6bba222ecfcbx46f1x822_a99e5_name')]", 
+      "tags": {
+        "environment": "Development", 
+        "corestack-system-manage": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/microsoft.insights/metricAlerts/CS-Availability-csg6bba222ecfcbx46f1x822-a99e5'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UsedCapacity_csg6bba222ecfcbx46f1x822_a99e5_name')]", 
+      "tags": {
+        "environment": "Development", 
+        "corestack-system-manage": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-csg6bba222ecfcbx46f1x822-a99e5'."
+    }
+  ]
+}
