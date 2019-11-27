@@ -1,0 +1,220 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "actionGroups_CS_Actiongroup_name": {
+      "defaultValue": "CS-Actiongroup", 
+      "type": "String"
+    }, 
+    "virtualNetworks_CS_RG_2019_11_19T06_54_12_322Z_vnet_name": {
+      "defaultValue": "CS-RG-2019-11-19T06_54_12.322Z-vnet", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Availability_eastasia2iakf_f7ba4_name": {
+      "defaultValue": "CS-Availability-eastasia2iakf-f7ba4", 
+      "type": "String"
+    }, 
+    "storageAccounts_eastasia2iakf_name": {
+      "defaultValue": "eastasia2iakf", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UsedCapacity_eastasia2iakf_f7ba4_name": {
+      "defaultValue": "CS-UsedCapacity-eastasia2iakf-f7ba4", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+      "tags": {
+        "environment": "Development", 
+        "corestack-system-manage": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2019-03-01", 
+      "location": "Global", 
+      "type": "microsoft.insights/actionGroups", 
+      "properties": {
+        "automationRunbookReceivers": [], 
+        "emailReceivers": [], 
+        "logicAppReceivers": [], 
+        "enabled": true, 
+        "itsmReceivers": [], 
+        "azureFunctionReceivers": [], 
+        "groupShortName": "A20NGYYM", 
+        "smsReceivers": [], 
+        "azureAppPushReceivers": [], 
+        "voiceReceivers": [], 
+        "webhookReceivers": [
+          {
+            "serviceUri": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5dd39138765aa03095167730&alert_type=monitoring", 
+            "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+            "useCommonAlertSchema": false
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/CS-RG-2019-11-19T06_54_12.322Z/providers/microsoft.insights/actionGroups/CS-Actiongroup'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_CS_RG_2019_11_19T06_54_12_322Z_vnet_name')]", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/CS-RG-2019-11-19T06_54_12.322Z/providers/Microsoft.Network/virtualNetworks/CS-RG-2019-11-19T06_54_12.322Z-vnet'.", 
+      "apiVersion": "2019-09-01", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "[concat(parameters('virtualNetworks_CS_RG_2019_11_19T06_54_12_322Z_vnet_name'), '-subnet')]", 
+            "properties": {
+              "addressPrefix": "10.0.0.0/16", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }, 
+        "enableDdosProtection": false, 
+        "enableVmProtection": false
+      }, 
+      "location": "eastasia"
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_eastasia2iakf_name')]", 
+      "apiVersion": "2019-04-01", 
+      "location": "eastasia", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": false, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/CS-RG-2019-11-19T06_54_12.322Z/providers/Microsoft.Storage/storageAccounts/eastasia2iakf'."
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_CS_RG_2019_11_19T06_54_12_322Z_vnet_name'), '/', parameters('virtualNetworks_CS_RG_2019_11_19T06_54_12_322Z_vnet_name'), '-subnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/CS-RG-2019-11-19T06_54_12.322Z/providers/Microsoft.Network/virtualNetworks/CS-RG-2019-11-19T06_54_12.322Z-vnet/subnets/CS-RG-2019-11-19T06_54_12.322Z-vnet-subnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_CS_RG_2019_11_19T06_54_12_322Z_vnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.0.0/16", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_eastasia2iakf_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/CS-RG-2019-11-19T06_54_12.322Z/providers/Microsoft.Storage/storageAccounts/eastasia2iakf/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastasia2iakf_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Availability_eastasia2iakf_f7ba4_name')]", 
+      "tags": {
+        "environment": "Development", 
+        "corestack-system-manage": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastasia2iakf_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastasia2iakf_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M", 
+        "severity": 3
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/CS-RG-2019-11-19T06_54_12.322Z/providers/microsoft.insights/metricAlerts/CS-Availability-eastasia2iakf-f7ba4'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UsedCapacity_eastasia2iakf_f7ba4_name')]", 
+      "tags": {
+        "environment": "Development", 
+        "corestack-system-manage": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastasia2iakf_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastasia2iakf_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M", 
+        "severity": 3
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/CS-RG-2019-11-19T06_54_12.322Z/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-eastasia2iakf-f7ba4'."
+    }
+  ]
+}
