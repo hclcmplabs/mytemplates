@@ -3,20 +3,20 @@
   "contentVersion": "1.0.0.0", 
   "variables": {}, 
   "parameters": {
-    "metricAlerts_CS_UsedCapacity_csg6bba222ecfcbx46f1x822_a99e5_name": {
-      "defaultValue": "CS-UsedCapacity-csg6bba222ecfcbx46f1x822-a99e5", 
-      "type": "String"
-    }, 
     "actionGroups_CS_Actiongroup_name": {
       "defaultValue": "CS-Actiongroup", 
       "type": "String"
     }, 
-    "storageAccounts_csg6bba222ecfcbx46f1x822_name": {
-      "defaultValue": "csg6bba222ecfcbx46f1x822", 
+    "metricAlerts_CS_UsedCapacity_csg6bba222ecfcbx46f1x822_a99e5_name": {
+      "defaultValue": "CS-UsedCapacity-csg6bba222ecfcbx46f1x822-a99e5", 
       "type": "String"
     }, 
     "metricAlerts_CS_Availability_csg6bba222ecfcbx46f1x822_a99e5_name": {
       "defaultValue": "CS-Availability-csg6bba222ecfcbx46f1x822-a99e5", 
+      "type": "String"
+    }, 
+    "storageAccounts_csg6bba222ecfcbx46f1x822_name": {
+      "defaultValue": "csg6bba222ecfcbx46f1x822", 
       "type": "String"
     }
   }, 
@@ -121,7 +121,6 @@
           "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'))]"
         ], 
         "description": "Request body for creating alert rule.", 
-        "severity": 3, 
         "enabled": true, 
         "windowSize": "PT1H", 
         "actions": [
@@ -132,7 +131,8 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT1M"
+        "evaluationFrequency": "PT1M", 
+        "severity": 3
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/microsoft.insights/metricAlerts/CS-Availability-csg6bba222ecfcbx46f1x822-a99e5'."
     }, 
@@ -155,7 +155,6 @@
           "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_csg6bba222ecfcbx46f1x822_name'))]"
         ], 
         "description": "Request body for creating alert rule.", 
-        "severity": 3, 
         "enabled": true, 
         "windowSize": "PT1H", 
         "actions": [
@@ -166,7 +165,8 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT1M"
+        "evaluationFrequency": "PT1M", 
+        "severity": 3
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/cloud-shell-storage-centralindia/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-csg6bba222ecfcbx46f1x822-a99e5'."
     }
