@@ -1,0 +1,828 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "virtualNetworks_QA_INFRA_RG_VN_name": {
+      "defaultValue": "QA_INFRA_RG-VN", 
+      "type": "String"
+    }, 
+    "storageAccounts_eastusxkevl_name": {
+      "defaultValue": "eastusxkevl", 
+      "type": "String"
+    }, 
+    "actionGroups_CS_Actiongroup_name": {
+      "defaultValue": "CS-Actiongroup", 
+      "type": "String"
+    }, 
+    "virtualMachines_mytestvm01_name": {
+      "defaultValue": "mytestvm01", 
+      "type": "String"
+    }, 
+    "storageAccounts_mytestvm01storage01_name": {
+      "defaultValue": "mytestvm01storage01", 
+      "type": "String"
+    }, 
+    "publicIPAddresses_mytestvm01_ip_name": {
+      "defaultValue": "mytestvm01-ip", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_NSG001_name": {
+      "defaultValue": "NSG001", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_mytestvm01_nsg_name": {
+      "defaultValue": "mytestvm01-nsg", 
+      "type": "String"
+    }, 
+    "virtualNetworks_mytestvm01_VN_name": {
+      "defaultValue": "mytestvm01-VN", 
+      "type": "String"
+    }, 
+    "networkInterfaces_mytestvm01899_name": {
+      "defaultValue": "mytestvm01899", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true"
+      }, 
+      "apiVersion": "2019-03-01", 
+      "location": "Global", 
+      "type": "microsoft.insights/actionGroups", 
+      "properties": {
+        "automationRunbookReceivers": [], 
+        "emailReceivers": [], 
+        "logicAppReceivers": [], 
+        "enabled": true, 
+        "itsmReceivers": [], 
+        "azureFunctionReceivers": [], 
+        "groupShortName": "YXKUWJUG", 
+        "smsReceivers": [], 
+        "azureAppPushReceivers": [], 
+        "voiceReceivers": [], 
+        "webhookReceivers": [
+          {
+            "serviceUri": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5ddf715a765aa0681e06cca6&alert_type=monitoring", 
+            "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+            "useCommonAlertSchema": false
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/actionGroups/CS-Actiongroup'."
+    }, 
+    {
+      "name": "[parameters('networkSecurityGroups_mytestvm01_nsg_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "Port_8080", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1010, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "8080", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "HTTP", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1020, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "80", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "HTTPS", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1030, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "443", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "RDP", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1040, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "3389", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "default-allow-ssh", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1000, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg'."
+    }, 
+    {
+      "name": "[parameters('networkSecurityGroups_NSG001_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "Port_8080", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 100, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "8080", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "HTTP", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 110, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "80", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "HTTPS", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 120, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "443", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "SSH", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 130, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "RDP", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 140, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "3389", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001'."
+    }, 
+    {
+      "sku": {
+        "name": "Basic"
+      }, 
+      "name": "[parameters('publicIPAddresses_mytestvm01_ip_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/publicIPAddresses", 
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic", 
+        "publicIPAddressVersion": "IPv4", 
+        "ipAddress": "40.121.199.117", 
+        "idleTimeoutInMinutes": 4, 
+        "ipTags": []
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/publicIPAddresses/mytestvm01-ip'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_mytestvm01_VN_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "default", 
+            "properties": {
+              "addressPrefix": "10.0.0.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableDdosProtection": false, 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/24"
+          ]
+        }, 
+        "enableVmProtection": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/mytestvm01-VN'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_QA_INFRA_RG_VN_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "default", 
+            "properties": {
+              "addressPrefix": "10.1.0.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableDdosProtection": false, 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.1.0.0/16"
+          ]
+        }, 
+        "enableVmProtection": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/QA_INFRA_RG-VN'."
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_eastusxkevl_name')]", 
+      "apiVersion": "2019-04-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": false, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/eastusxkevl'."
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_mytestvm01storage01_name')]", 
+      "apiVersion": "2019-04-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": true, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "enabled": true
+            }, 
+            "file": {
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/mytestvm01storage01'."
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/default-allow-ssh')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/default-allow-ssh'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1000, 
+        "direction": "Inbound", 
+        "protocol": "TCP", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "22", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/HTTP')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/HTTP'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1020, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "80", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/HTTP')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/HTTP'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 110, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "80", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/HTTPS')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/HTTPS'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1030, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "443", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/HTTPS')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/HTTPS'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 120, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "443", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/Port_8080')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/Port_8080'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1010, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "8080", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/Port_8080')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/Port_8080'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 100, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "8080", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/RDP')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/RDP'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1040, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3389", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/RDP')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/RDP'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 140, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3389", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/SSH')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/SSH'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 130, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "22", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_mytestvm01_VN_name'), '/default')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/mytestvm01-VN/subnets/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_mytestvm01_VN_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.0.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_QA_INFRA_RG_VN_name'), '/default')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/QA_INFRA_RG-VN/subnets/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_QA_INFRA_RG_VN_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.1.0.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "sku": {
+        "name": "Standard_LRS"
+      }, 
+      "name": "[concat(parameters('storageAccounts_eastusxkevl_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/eastusxkevl/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusxkevl_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "sku": {
+        "name": "Standard_LRS"
+      }, 
+      "name": "[concat(parameters('storageAccounts_mytestvm01storage01_name'), '/default')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/mytestvm01storage01/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_mytestvm01storage01_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "name": "[parameters('virtualMachines_mytestvm01_name')]", 
+      "apiVersion": "2019-03-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_mytestvm01899_name'))]", 
+        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_mytestvm01storage01_name'))]"
+      ], 
+      "type": "Microsoft.Compute/virtualMachines", 
+      "properties": {
+        "hardwareProfile": {
+          "vmSize": "Standard_B1ls"
+        }, 
+        "storageProfile": {
+          "imageReference": {
+            "sku": "16.04-LTS", 
+            "publisher": "Canonical", 
+            "version": "latest", 
+            "offer": "UbuntuServer"
+          }, 
+          "osDisk": {
+            "name": "[concat(parameters('virtualMachines_mytestvm01_name'), '_OsDisk_1_44903014b04f4ad5bad5615c6f5b550c')]", 
+            "diskSizeGB": 30, 
+            "managedDisk": {
+              "storageAccountType": "Standard_LRS", 
+              "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_mytestvm01_name'), '_OsDisk_1_44903014b04f4ad5bad5615c6f5b550c'))]"
+            }, 
+            "caching": "ReadWrite", 
+            "createOption": "FromImage", 
+            "osType": "Linux"
+          }, 
+          "dataDisks": []
+        }, 
+        "osProfile": {
+          "adminUsername": "[parameters('virtualMachines_mytestvm01_name')]", 
+          "secrets": [], 
+          "computerName": "[parameters('virtualMachines_mytestvm01_name')]", 
+          "linuxConfiguration": {
+            "provisionVMAgent": true, 
+            "disablePasswordAuthentication": false
+          }, 
+          "allowExtensionOperations": true
+        }, 
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "storageUri": "[concat('https://', parameters('storageAccounts_mytestvm01storage01_name'), '.blob.core.windows.net/')]", 
+            "enabled": true
+          }
+        }, 
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_mytestvm01899_name'))]"
+            }
+          ]
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Compute/virtualMachines/mytestvm01'."
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_mytestvm01storage01_name'), '/default/bootdiagnostics-mytestvm0-b093757d-d6aa-4b79-88ce-0107efd44fe1')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/mytestvm01storage01/blobServices/default/containers/bootdiagnostics-mytestvm0-b093757d-d6aa-4b79-88ce-0107efd44fe1'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_mytestvm01storage01_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_mytestvm01storage01_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_mytestvm01899_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_mytestvm01_ip_name'))]", 
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_mytestvm01_VN_name'), 'default')]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+        }, 
+        "enableIPForwarding": false, 
+        "dnsSettings": {
+          "dnsServers": []
+        }, 
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_mytestvm01_VN_name'), 'default')]"
+              }, 
+              "primary": true, 
+              "privateIPAddressVersion": "IPv4", 
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_mytestvm01_ip_name'))]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "privateIPAddress": "10.0.0.4"
+            }
+          }
+        ], 
+        "enableAcceleratedNetworking": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkInterfaces/mytestvm01899'."
+    }
+  ]
+}
