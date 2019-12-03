@@ -1,0 +1,72 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "actionGroups_cstestrg_alert_name": {
+      "defaultValue": "cstestrg_alert", 
+      "type": "String"
+    }, 
+    "actionGroups_CS_Alert_Actiongroup_externalid": {
+      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus_1/providers/Microsoft.Insights/actionGroups/CS-Alert-Actiongroup", 
+      "type": "String"
+    }, 
+    "metricAlerts_testalertforcorestack_name": {
+      "defaultValue": "testalertforcorestack", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('actionGroups_cstestrg_alert_name')]", 
+      "apiVersion": "2019-03-01", 
+      "location": "Global", 
+      "type": "microsoft.insights/actionGroups", 
+      "properties": {
+        "automationRunbookReceivers": [], 
+        "emailReceivers": [
+          {
+            "emailAddress": "Naveenkumar@corestack.io", 
+            "name": "testaction_-EmailAction-", 
+            "useCommonAlertSchema": false
+          }
+        ], 
+        "logicAppReceivers": [], 
+        "enabled": true, 
+        "itsmReceivers": [], 
+        "azureFunctionReceivers": [], 
+        "groupShortName": "tets", 
+        "smsReceivers": [], 
+        "azureAppPushReceivers": [], 
+        "voiceReceivers": [], 
+        "webhookReceivers": []
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus_1/providers/microsoft.insights/actionGroups/cstestrg_alert'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_testalertforcorestack_name')]", 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "type": "Microsoft.Insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus_1"
+        ], 
+        "description": "This is a metric alert", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT5M", 
+        "actions": [
+          {
+            "actionGroupId": "[parameters('actionGroups_CS_Alert_Actiongroup_externalid')]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/AzureBackupRG_eastus_1/providers/Microsoft.Insights/metricAlerts/testalertforcorestack'."
+    }
+  ]
+}
