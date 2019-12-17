@@ -19,8 +19,8 @@
       "defaultValue": "CS-Actiongroup", 
       "type": "String"
     }, 
-    "networkSecurityGroups_testnsg_name": {
-      "defaultValue": "testnsg", 
+    "schedules_shutdown_computevm_terra1vm_name": {
+      "defaultValue": "shutdown-computevm-terra1vm", 
       "type": "String"
     }, 
     "metricAlerts_CS_Availability_diag276f6bbed2562354_df1f6_name": {
@@ -35,8 +35,8 @@
       "defaultValue": "CS-PercentageCPU-terra1vm-42174", 
       "type": "String"
     }, 
-    "schedules_shutdown_computevm_terra1vm_name": {
-      "defaultValue": "shutdown-computevm-terra1vm", 
+    "networkSecurityGroups_testnsg_name": {
+      "defaultValue": "testnsg", 
       "type": "String"
     }, 
     "networkInterfaces_testNIC_name": {
@@ -56,9 +56,26 @@
     {
       "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
       "tags": {
-        "environment": "Development", 
+        "Backup attribute": "", 
+        "Data Classification": "", 
+        "Owner's Department": "", 
+        "Solution Architect": "", 
+        "Business Application Service": "", 
         "corestack-system-manage": "true", 
-        "backup": "true"
+        "Internal Billing Code": "", 
+        "Service Owner": "", 
+        "Release Time": "", 
+        "System": "", 
+        "Environment": "", 
+        "Hibernation": "", 
+        "Operating System with version": "", 
+        "Service Level": "", 
+        "Regulatory": "", 
+        "Security Zone": "", 
+        "Service Name": "", 
+        "Order Number": "", 
+        "backup": "true", 
+        "Add-on for OS": ""
       }, 
       "apiVersion": "2019-03-01", 
       "location": "Global", 
@@ -70,13 +87,13 @@
         "enabled": true, 
         "itsmReceivers": [], 
         "azureFunctionReceivers": [], 
-        "groupShortName": "11O8OVO6", 
+        "groupShortName": "HQZUZJBM", 
         "smsReceivers": [], 
         "azureAppPushReceivers": [], 
         "voiceReceivers": [], 
         "webhookReceivers": [
           {
-            "serviceUri": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5dd39138765aa03095167730&alert_type=monitoring", 
+            "serviceUri": "https://z64l62ff05.execute-api.us-east-1.amazonaws.com/CS_SB_StageName/alerts?service_account_id=5df12599b0e9b9d914c508b8&alert_type=monitoring", 
             "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
             "useCommonAlertSchema": false
           }
@@ -86,8 +103,8 @@
     }, 
     {
       "name": "[parameters('networkSecurityGroups_testnsg_name')]", 
-      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg'.", 
       "apiVersion": "2019-09-01", 
+      "location": "eastus", 
       "type": "Microsoft.Network/networkSecurityGroups", 
       "properties": {
         "securityRules": [
@@ -95,39 +112,39 @@
             "name": "SSH", 
             "properties": {
               "sourceAddressPrefixes": [], 
-              "access": "Allow", 
+              "priority": 1001, 
               "direction": "Inbound", 
               "protocol": "Tcp", 
               "destinationPortRanges": [], 
-              "priority": 1001, 
+              "access": "Allow", 
               "destinationAddressPrefixes": [], 
               "destinationPortRange": "22", 
-              "sourceAddressPrefix": "*", 
+              "sourcePortRange": "*", 
               "sourcePortRanges": [], 
               "destinationAddressPrefix": "*", 
-              "sourcePortRange": "*"
+              "sourceAddressPrefix": "*"
             }
           }, 
           {
             "name": "nodejs", 
             "properties": {
               "sourceAddressPrefixes": [], 
-              "access": "Allow", 
+              "priority": 1002, 
               "direction": "Inbound", 
               "protocol": "Tcp", 
               "destinationPortRanges": [], 
-              "priority": 1002, 
+              "access": "Allow", 
               "destinationAddressPrefixes": [], 
               "destinationPortRange": "3000", 
-              "sourceAddressPrefix": "*", 
+              "sourcePortRange": "*", 
               "sourcePortRanges": [], 
               "destinationAddressPrefix": "*", 
-              "sourcePortRange": "*"
+              "sourceAddressPrefix": "*"
             }
           }
         ]
       }, 
-      "location": "eastus"
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg'."
     }, 
     {
       "name": "[parameters('virtualNetworks_testVnet_name')]", 
@@ -251,17 +268,17 @@
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
         "sourceAddressPrefixes": [], 
-        "access": "Allow", 
+        "priority": 1002, 
         "direction": "Inbound", 
         "protocol": "Tcp", 
         "destinationPortRanges": [], 
-        "priority": 1002, 
+        "access": "Allow", 
         "destinationAddressPrefixes": [], 
         "destinationPortRange": "3000", 
-        "sourceAddressPrefix": "*", 
+        "sourcePortRange": "*", 
         "sourcePortRanges": [], 
         "destinationAddressPrefix": "*", 
-        "sourcePortRange": "*"
+        "sourceAddressPrefix": "*"
       }
     }, 
     {
@@ -274,17 +291,17 @@
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
         "sourceAddressPrefixes": [], 
-        "access": "Allow", 
+        "priority": 1001, 
         "direction": "Inbound", 
         "protocol": "Tcp", 
         "destinationPortRanges": [], 
-        "priority": 1001, 
+        "access": "Allow", 
         "destinationAddressPrefixes": [], 
         "destinationPortRange": "22", 
-        "sourceAddressPrefix": "*", 
+        "sourcePortRange": "*", 
         "sourcePortRanges": [], 
         "destinationAddressPrefix": "*", 
-        "sourcePortRange": "*"
+        "sourceAddressPrefix": "*"
       }
     }, 
     {
@@ -403,25 +420,13 @@
             "name": "myOsDisk", 
             "writeAcceleratorEnabled": false, 
             "managedDisk": {
-              "storageAccountType": "Premium_LRS", 
               "id": "[resourceId('Microsoft.Compute/disks', 'myOsDisk')]"
             }, 
-            "diskSizeGB": 30, 
-            "createOption": "FromImage", 
             "caching": "ReadWrite", 
+            "createOption": "FromImage", 
             "osType": "Linux"
           }, 
           "dataDisks": []
-        }, 
-        "networkProfile": {
-          "networkInterfaces": [
-            {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testNIC_name'))]", 
-              "properties": {
-                "primary": false
-              }
-            }
-          ]
         }, 
         "osProfile": {
           "adminUsername": "ubuntu", 
@@ -446,6 +451,16 @@
             "storageUri": "[concat('https://', parameters('storageAccounts_diag276f6bbed2562354_name'), '.blob.core.windows.net/')]", 
             "enabled": true
           }
+        }, 
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testNIC_name'))]", 
+              "properties": {
+                "primary": false
+              }
+            }
+          ]
         }
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Compute/virtualMachines/terra1vm'."
@@ -453,9 +468,26 @@
     {
       "name": "[parameters('metricAlerts_CS_Availability_diag276f6bbed2562354_df1f6_name')]", 
       "tags": {
-        "environment": "Development", 
+        "Backup attribute": "", 
+        "Data Classification": "", 
+        "Owner's Department": "", 
+        "Solution Architect": "", 
+        "Business Application Service": "", 
         "corestack-system-manage": "true", 
-        "backup": "true"
+        "Internal Billing Code": "", 
+        "Service Owner": "", 
+        "Release Time": "", 
+        "System": "", 
+        "Environment": "", 
+        "Hibernation": "", 
+        "Operating System with version": "", 
+        "Service Level": "", 
+        "Regulatory": "", 
+        "Security Zone": "", 
+        "Service Name": "", 
+        "Order Number": "", 
+        "backup": "true", 
+        "Add-on for OS": ""
       }, 
       "apiVersion": "2018-03-01", 
       "location": "global", 
@@ -469,6 +501,7 @@
           "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
         ], 
         "description": "Request body for creating alert rule.", 
+        "severity": 3, 
         "enabled": true, 
         "windowSize": "PT1H", 
         "actions": [
@@ -479,17 +512,33 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT1M", 
-        "severity": 3
+        "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-Availability-diag276f6bbed2562354-df1f6'."
     }, 
     {
       "name": "[parameters('metricAlerts_CS_NetworkOut_terra1vm_42174_name')]", 
       "tags": {
-        "environment": "Development", 
+        "Backup attribute": "", 
+        "Data Classification": "", 
+        "Owner's Department": "", 
+        "Solution Architect": "", 
+        "Business Application Service": "", 
         "corestack-system-manage": "true", 
-        "backup": "true"
+        "Internal Billing Code": "", 
+        "Service Owner": "", 
+        "Release Time": "", 
+        "System": "", 
+        "Environment": "", 
+        "Hibernation": "", 
+        "Operating System with version": "", 
+        "Service Level": "", 
+        "Regulatory": "", 
+        "Security Zone": "", 
+        "Service Name": "", 
+        "Order Number": "", 
+        "backup": "true", 
+        "Add-on for OS": ""
       }, 
       "apiVersion": "2018-03-01", 
       "location": "global", 
@@ -503,6 +552,7 @@
           "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_terra1vm_name'))]"
         ], 
         "description": "Request body for creating alert rule.", 
+        "severity": 3, 
         "enabled": true, 
         "windowSize": "PT1H", 
         "actions": [
@@ -513,17 +563,33 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT1M", 
-        "severity": 3
+        "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-NetworkOut-terra1vm-42174'."
     }, 
     {
       "name": "[parameters('metricAlerts_CS_PercentageCPU_terra1vm_42174_name')]", 
       "tags": {
-        "environment": "Development", 
+        "Backup attribute": "", 
+        "Data Classification": "", 
+        "Owner's Department": "", 
+        "Solution Architect": "", 
+        "Business Application Service": "", 
         "corestack-system-manage": "true", 
-        "backup": "true"
+        "Internal Billing Code": "", 
+        "Service Owner": "", 
+        "Release Time": "", 
+        "System": "", 
+        "Environment": "", 
+        "Hibernation": "", 
+        "Operating System with version": "", 
+        "Service Level": "", 
+        "Regulatory": "", 
+        "Security Zone": "", 
+        "Service Name": "", 
+        "Order Number": "", 
+        "backup": "true", 
+        "Add-on for OS": ""
       }, 
       "apiVersion": "2018-03-01", 
       "location": "global", 
@@ -537,8 +603,9 @@
           "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_terra1vm_name'))]"
         ], 
         "description": "Request body for creating alert rule.", 
+        "severity": 3, 
         "enabled": true, 
-        "windowSize": "PT1H", 
+        "windowSize": "PT15M", 
         "actions": [
           {
             "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
@@ -547,17 +614,33 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT1M", 
-        "severity": 3
+        "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-PercentageCPU-terra1vm-42174'."
     }, 
     {
       "name": "[parameters('metricAlerts_CS_UsedCapacity_diag276f6bbed2562354_df1f6_name')]", 
       "tags": {
-        "environment": "Development", 
+        "Backup attribute": "", 
+        "Data Classification": "", 
+        "Owner's Department": "", 
+        "Solution Architect": "", 
+        "Business Application Service": "", 
         "corestack-system-manage": "true", 
-        "backup": "true"
+        "Internal Billing Code": "", 
+        "Service Owner": "", 
+        "Release Time": "", 
+        "System": "", 
+        "Environment": "", 
+        "Hibernation": "", 
+        "Operating System with version": "", 
+        "Service Level": "", 
+        "Regulatory": "", 
+        "Security Zone": "", 
+        "Service Name": "", 
+        "Order Number": "", 
+        "backup": "true", 
+        "Add-on for OS": ""
       }, 
       "apiVersion": "2018-03-01", 
       "location": "global", 
@@ -571,6 +654,7 @@
           "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
         ], 
         "description": "Request body for creating alert rule.", 
+        "severity": 3, 
         "enabled": true, 
         "windowSize": "PT1H", 
         "actions": [
@@ -581,8 +665,7 @@
         "criteria": {
           "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "evaluationFrequency": "PT1M", 
-        "severity": 3
+        "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-diag276f6bbed2562354-df1f6'."
     }, 
@@ -596,12 +679,12 @@
       ], 
       "type": "Microsoft.Network/networkInterfaces", 
       "properties": {
-        "enableAcceleratedNetworking": false, 
-        "dnsSettings": {
-          "dnsServers": []
-        }, 
         "networkSecurityGroup": {
           "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
+        }, 
+        "enableIPForwarding": false, 
+        "dnsSettings": {
+          "dnsServers": []
         }, 
         "ipConfigurations": [
           {
@@ -617,7 +700,7 @@
             }
           }
         ], 
-        "enableIPForwarding": false
+        "enableAcceleratedNetworking": false
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkInterfaces/testNIC'."
     }, 
