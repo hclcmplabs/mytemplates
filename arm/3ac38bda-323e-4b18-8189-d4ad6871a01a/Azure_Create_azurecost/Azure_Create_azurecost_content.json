@@ -3,60 +3,44 @@
   "contentVersion": "1.0.0.0", 
   "variables": {}, 
   "parameters": {
-    "activityLogAlerts_Leo_dataase2pls_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-dataase2pls-data-io-percentage-AZSQ", 
+    "metricAlerts_CS_BytesInDDoS_Rraj_backup_pip_ca16864f7bbb4e4783b1a1f94145f762_898d1_name": {
+      "defaultValue": "CS-BytesInDDoS-Rraj_backup-pip-ca16864f7bbb4e4783b1a1f94145f762-898d1", 
       "type": "String"
     }, 
-    "actionGroups_naveenalert_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/actionGroups/naveenalert", 
+    "virtualMachines_windowstestvm_name": {
+      "defaultValue": "windowstestvm", 
       "type": "String"
     }, 
-    "actionGroups_CS_Queue_Monitoring_name": {
-      "defaultValue": "CS-Queue-Monitoring", 
+    "metricAlerts_CS_NetworkOut_windowstestvm_ce209_name": {
+      "defaultValue": "CS-NetworkOut-windowstestvm-ce209", 
       "type": "String"
     }, 
-    "networkInterfaces_devtestnaveen773_name": {
-      "defaultValue": "devtestnaveen773", 
+    "disks_windowstestvm_OsDisk_1_b31ed1619d384813a3dd5b25d47cb53a_name": {
+      "defaultValue": "windowstestvm_OsDisk_1_b31ed1619d384813a3dd5b25d47cb53a", 
       "type": "String"
     }, 
-    "activityLogAlerts_CS_Actiongroup_delete_name": {
-      "defaultValue": "CS-Actiongroup-delete", 
+    "metricAlerts_CS_Availability_azurecostdiag867_82423_name": {
+      "defaultValue": "CS-Availability-azurecostdiag867-82423", 
       "type": "String"
     }, 
-    "activityLogAlerts_CS_Actiongroup_create_name": {
-      "defaultValue": "CS-Actiongroup-create", 
+    "metricAlerts_CS_UsedCapacity_azurecostdiag_80339_name": {
+      "defaultValue": "CS-UsedCapacity-azurecostdiag-80339", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_database1_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1-data-io-percentage-AZSQ", 
+    "storageAccounts_azurecostdiag867_externalid": {
+      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag867", 
       "type": "String"
     }, 
-    "activityLogAlerts_test_act_grp_name": {
-      "defaultValue": "test-act-grp", 
+    "virtualNetworks_azurecostvnet986_name": {
+      "defaultValue": "azurecostvnet986", 
       "type": "String"
     }, 
-    "servers_testsqlservercedatabasesdataase2_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdataase2", 
+    "metricAlerts_CS_Availability_azurecostdiag_80339_name": {
+      "defaultValue": "CS-Availability-azurecostdiag-80339", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_database1azn_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1azn-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_database1final_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1final-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_test__create_database_AZSQ_name": {
-      "defaultValue": "Leo-test--create-database-AZSQ", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_dataase2plss_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-dataase2plss-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_dataase2azn_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-dataase2azn-data-io-percentage-AZSQ", 
+    "metricAlerts_CS_PacketsInDDoS_win_backup_pip_25e586a0500b4a90810280427b35732a_5456f_name": {
+      "defaultValue": "CS-PacketsInDDoS-win_backup-pip-25e586a0500b4a90810280427b35732a-5456f", 
       "type": "String"
     }, 
     "virtualNetworks_azurecost_vnet_name": {
@@ -67,125 +51,108 @@
       "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Sql/servers/testsqlserverce", 
       "type": "String"
     }, 
-    "activityLogAlerts_Alert_For_Recovery_Vault_Backup_Restore_Failure_name": {
-      "defaultValue": "Alert_For_Recovery_Vault_Backup_Restore_Failure", 
+    "metricAlerts_CS_UsedCapacity_azurecostdiag867_82423_name": {
+      "defaultValue": "CS-UsedCapacity-azurecostdiag867-82423", 
       "type": "String"
     }, 
-    "activityLogAlerts_naveenalert_create_name": {
-      "defaultValue": "naveenalert-create", 
+    "metricAlerts_CS_BytesInDDoS_windowstestvm_ip_12e42_name": {
+      "defaultValue": "CS-BytesInDDoS-windowstestvm-ip-12e42", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_dataase2final_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-dataase2final-data-io-percentage-AZSQ", 
+    "metricAlerts_CS_BytesInDDoS_win_backup_pip_25e586a0500b4a90810280427b35732a_5456f_name": {
+      "defaultValue": "CS-BytesInDDoS-win_backup-pip-25e586a0500b4a90810280427b35732a-5456f", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_database1pls_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1pls-data-io-percentage-AZSQ", 
+    "metricAlerts_CS_PercentageCPU_windowstestvm_ce209_name": {
+      "defaultValue": "CS-PercentageCPU-windowstestvm-ce209", 
       "type": "String"
     }, 
-    "storageAccounts_azurecostdiag_name": {
-      "defaultValue": "azurecostdiag", 
+    "activityLogAlerts_Leo_testsqlserverce_testsql2_create_database_AZSQ_name": {
+      "defaultValue": "Leo-testsqlserverce-testsql2-create-database-AZSQ", 
       "type": "String"
     }, 
-    "actionGroups_cstestrg_alert_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AzureBackupRG_eastus_1/providers/microsoft.insights/actionGroups/cstestrg_alert", 
+    "publicIPAddresses_windowstestvm_ip_name": {
+      "defaultValue": "windowstestvm-ip", 
       "type": "String"
     }, 
-    "actionGroups_CS_Alert_Actiongroup_name": {
-      "defaultValue": "CS-Alert-Actiongroup", 
+    "metricAlerts_CS_PacketsInDDoS_windowstestvm_ip_12e42_name": {
+      "defaultValue": "CS-PacketsInDDoS-windowstestvm-ip-12e42", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_database1azure_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1azure-data-io-percentage-AZSQ", 
+    "networkSecurityGroups_windowstestvm_nsg_name": {
+      "defaultValue": "windowstestvm-nsg", 
       "type": "String"
     }, 
-    "activityLogAlerts_test_sql_alert_6_name": {
-      "defaultValue": "test_sql_alert_6", 
+    "networkSecurityGroups_windowstestvm1_nsg_name": {
+      "defaultValue": "windowstestvm1-nsg", 
       "type": "String"
     }, 
-    "activityLogAlerts_testtaalertrulke1_name": {
-      "defaultValue": "testtaalertrulke1", 
+    "actionGroups_CS_Actiongroup_name": {
+      "defaultValue": "CS-Actiongroup", 
       "type": "String"
     }, 
-    "networkSecurityGroups_devtestnaveen_nsg_name": {
-      "defaultValue": "devtestnaveen-nsg", 
+    "publicIPAddresses_win_backup_pip_25e586a0500b4a90810280427b35732a_externalid": {
+      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AZURECOST/providers/Microsoft.Network/publicIPAddresses/win_backup-pip-25e586a0500b4a90810280427b35732a", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_database1plss_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1plss-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "actionGroups_CS_Actiongroup_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Insights/actionGroups/CS-Actiongroup", 
-      "type": "String"
-    }, 
-    "virtualMachines_devtestnaveen_name": {
-      "defaultValue": "devtestnaveen", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_database1azt_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-database1azt-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "servers_testsqlservercedatabasesdatabase1_externalid": {
-      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdatabase1", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_dataase2_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-dataase2-data-io-percentage-AZSQ", 
-      "type": "String"
-    }, 
-    "publicIPAddresses_devtestnaveen_ip_name": {
-      "defaultValue": "devtestnaveen-ip", 
-      "type": "String"
-    }, 
-    "activityLogAlerts_Leo_dataase2azure_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-dataase2azure-data-io-percentage-AZSQ", 
+    "publicIPAddresses_windowstestvm1_ip_name": {
+      "defaultValue": "windowstestvm1-ip", 
       "type": "String"
     }, 
     "vaults_vault964_name": {
       "defaultValue": "vault964", 
       "type": "String"
     }, 
-    "activityLogAlerts_naveenalert_delete_name": {
-      "defaultValue": "naveenalert-delete", 
+    "networkInterfaces_windowstestvm281_name": {
+      "defaultValue": "windowstestvm281", 
       "type": "String"
     }, 
-    "activityLogAlerts_Leo_dataase2azt_data_io_percentage_AZSQ_name": {
-      "defaultValue": "Leo-dataase2azt-data-io-percentage-AZSQ", 
+    "publicIPAddresses_Rraj_backup_pip_ca16864f7bbb4e4783b1a1f94145f762_externalid": {
+      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/AZURECOST/providers/Microsoft.Network/publicIPAddresses/Rraj_backup-pip-ca16864f7bbb4e4783b1a1f94145f762", 
       "type": "String"
     }, 
-    "disks_devtestnaveen_OsDisk_1_201c0b7e36dd4432b50b8a72be536a4c_name": {
-      "defaultValue": "devtestnaveen_OsDisk_1_201c0b7e36dd4432b50b8a72be536a4c", 
+    "storageAccounts_azurecostdiag_externalid": {
+      "defaultValue": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_PacketsInDDoS_Rraj_backup_pip_ca16864f7bbb4e4783b1a1f94145f762_898d1_name": {
+      "defaultValue": "CS-PacketsInDDoS-Rraj_backup-pip-ca16864f7bbb4e4783b1a1f94145f762-898d1", 
+      "type": "String"
+    }, 
+    "activityLogAlerts_Leo_testsqlserverce_testsql2_delete_database_AZSQ_name": {
+      "defaultValue": "Leo-testsqlserverce-testsql2-delete-database-AZSQ", 
       "type": "String"
     }
   }, 
   "resources": [
     {
       "sku": {
-        "tier": "Standard", 
-        "name": "StandardSSD_LRS"
+        "tier": "Premium", 
+        "name": "Premium_LRS"
       }, 
-      "name": "[parameters('disks_devtestnaveen_OsDisk_1_201c0b7e36dd4432b50b8a72be536a4c_name')]", 
+      "name": "[parameters('disks_windowstestvm_OsDisk_1_b31ed1619d384813a3dd5b25d47cb53a_name')]", 
       "apiVersion": "2018-06-01", 
       "location": "eastus", 
       "type": "Microsoft.Compute/disks", 
       "properties": {
         "osType": "Windows", 
         "diskSizeGB": 127, 
-        "diskMBpsReadWrite": 60, 
+        "diskMBpsReadWrite": 100, 
         "diskIOPSReadWrite": 500, 
         "creationData": {
           "imageReference": {
-            "id": "/Subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/Providers/Microsoft.Compute/Locations/eastus/Publishers/MicrosoftWindowsServer/ArtifactTypes/VMImage/Offers/WindowsServer/Skus/2016-Datacenter/Versions/14393.3274.1910061629"
+            "id": "/Subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/Providers/Microsoft.Compute/Locations/eastus/Publishers/MicrosoftWindowsServer/ArtifactTypes/VMImage/Offers/WindowsServer/Skus/2016-Datacenter/Versions/14393.3326.1911120150"
           }, 
           "createOption": "FromImage"
         }
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Compute/disks/devtestnaveen_OsDisk_1_201c0b7e36dd4432b50b8a72be536a4c'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Compute/disks/windowstestvm_OsDisk_1_b31ed1619d384813a3dd5b25d47cb53a'."
     }, 
     {
-      "name": "[parameters('actionGroups_CS_Alert_Actiongroup_name')]", 
+      "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
       "apiVersion": "2019-03-01", 
       "location": "Global", 
       "type": "microsoft.insights/actionGroups", 
@@ -196,63 +163,32 @@
         "enabled": true, 
         "itsmReceivers": [], 
         "azureFunctionReceivers": [], 
-        "groupShortName": "Alert", 
+        "groupShortName": "YDV0UTWL", 
         "smsReceivers": [], 
         "azureAppPushReceivers": [], 
         "voiceReceivers": [], 
         "webhookReceivers": [
           {
-            "serviceUri": "https://g66h5htie4.execute-api.ap-south-1.amazonaws.com/StageName/alerts", 
-            "name": "CS-Alert-Webhook", 
+            "serviceUri": "https://g66h5htie4.execute-api.ap-south-1.amazonaws.com/DummyStage/alerts?service_account_id=5d107e4f6992743a3491f83a&alert_type=monitoring", 
+            "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
             "useCommonAlertSchema": false
           }
         ]
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/actionGroups/CS-Alert-Actiongroup'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/actionGroups/CS-Actiongroup'."
     }, 
     {
-      "name": "[parameters('actionGroups_CS_Queue_Monitoring_name')]", 
-      "apiVersion": "2019-03-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/actionGroups", 
-      "properties": {
-        "automationRunbookReceivers": [], 
-        "emailReceivers": [
-          {
-            "emailAddress": "Naveenkumar@corestack.io", 
-            "name": "monitoring_queue", 
-            "useCommonAlertSchema": false
-          }
-        ], 
-        "logicAppReceivers": [], 
-        "enabled": true, 
-        "itsmReceivers": [], 
-        "azureFunctionReceivers": [], 
-        "groupShortName": "monitoring", 
-        "smsReceivers": [], 
-        "azureAppPushReceivers": [], 
-        "voiceReceivers": [], 
-        "webhookReceivers": []
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/actionGroups/CS-Queue-Monitoring'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_CS_Actiongroup_create_name')]", 
+      "name": "[parameters('activityLogAlerts_Leo_testsqlserverce_testsql2_create_database_AZSQ_name')]", 
       "apiVersion": "2017-04-01", 
       "location": "Global", 
       "type": "microsoft.insights/activityLogAlerts", 
       "properties": {
         "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a"
+          "[concat(parameters('servers_testsqlserverce_externalid'), '/databases/testsql2')]"
         ], 
+        "actions": {}, 
         "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
+        "description": "Alert which will be created during the azure sql database creation/updation", 
         "condition": {
           "allOf": [
             {
@@ -260,35 +196,30 @@
               "equals": "Administrative"
             }, 
             {
-              "field": "resourceType", 
-              "equals": "Microsoft.Compute/VirtualMachines"
+              "field": "Level", 
+              "equals": "Informational"
             }, 
             {
               "field": "operationName", 
-              "equals": "Microsoft.Compute/virtualMachines/write"
+              "equals": "Microsoft.Sql/servers/databases/write"
             }
           ]
         }
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/CS-Actiongroup-create'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-testsqlserverce-testsql2-create-database-AZSQ'."
     }, 
     {
-      "name": "[parameters('activityLogAlerts_CS_Actiongroup_delete_name')]", 
+      "name": "[parameters('activityLogAlerts_Leo_testsqlserverce_testsql2_delete_database_AZSQ_name')]", 
       "apiVersion": "2017-04-01", 
       "location": "Global", 
       "type": "microsoft.insights/activityLogAlerts", 
       "properties": {
         "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a"
+          "[concat(parameters('servers_testsqlserverce_externalid'), '/databases/testsql2')]"
         ], 
+        "actions": {}, 
         "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
+        "description": "Alert which will be created during the azure sql database deletion", 
         "condition": {
           "allOf": [
             {
@@ -296,780 +227,20 @@
               "equals": "Administrative"
             }, 
             {
-              "field": "resourceType", 
-              "equals": "Microsoft.Compute/VirtualMachines"
+              "field": "Level", 
+              "equals": "Informational"
             }, 
             {
               "field": "operationName", 
-              "equals": "Microsoft.Compute/virtualMachines/delete"
+              "equals": "Microsoft.Sql/servers/databases/delete"
             }
           ]
         }
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/CS-Actiongroup-delete'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-testsqlserverce-testsql2-delete-database-AZSQ'."
     }, 
     {
-      "name": "[parameters('activityLogAlerts_Leo_dataase2azn_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('servers_testsqlservercedatabasesdataase2_externalid')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-dataase2azn-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_dataase2azt_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdataase2"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }, 
-            {
-              "field": "resourceId", 
-              "equals": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdataase2"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-dataase2azt-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_dataase2azure_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdataase2"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-dataase2azure-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_dataase2_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdataase2"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-dataase2-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_dataase2final_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[concat(parameters('servers_testsqlserverce_externalid'), '/databases/dataase2')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-dataase2final-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_dataase2pls_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('servers_testsqlservercedatabasesdataase2_externalid')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "Microsoft.Sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-dataase2pls-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_dataase2plss_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('servers_testsqlservercedatabasesdataase2_externalid')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-dataase2plss-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_database1azn_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('servers_testsqlservercedatabasesdatabase1_externalid')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-database1azn-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_database1azt_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdatabase1"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }, 
-            {
-              "field": "resourceId", 
-              "equals": "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdatabase1"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-database1azt-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_database1azure_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdatabase1"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-database1azure-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_database1_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroupsazurecost/providers/Microsoft.Sql/servers/testsqlservercedatabasesdatabase1"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-database1-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_database1final_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[concat(parameters('servers_testsqlserverce_externalid'), '/databases/database1')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-database1final-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_database1pls_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('servers_testsqlservercedatabasesdatabase1_externalid')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "Microsoft.Sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-database1pls-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_database1plss_data_io_percentage_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "[parameters('servers_testsqlservercedatabasesdatabase1_externalid')]"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-database1plss-data-io-percentage-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_Leo_test__create_database_AZSQ_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          null
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Leo-test--create-database-AZSQ'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_naveenalert_create_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_naveenalert_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "Microsoft.Compute/VirtualMachines"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Compute/virtualMachines/write"
-            }
-          ]
-        }
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/naveenalert-create'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_naveenalert_delete_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_naveenalert_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "Microsoft.Compute/VirtualMachines"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Compute/virtualMachines/delete"
-            }
-          ]
-        }
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/naveenalert-delete'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_test_sql_alert_6_name')]", 
-      "tags": {
-        "environment": "Development"
-      }, 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a"
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database creation/updation"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/test_sql_alert_6'."
-    }, 
-    {
-      "name": "[parameters('activityLogAlerts_test_act_grp_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
-      "type": "microsoft.insights/activityLogAlerts", 
-      "properties": {
-        "scopes": [
-          null
-        ], 
-        "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_CS_Actiongroup_externalid')]"
-            }
-          ]
-        }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceType", 
-              "equals": "microsoft.sql/servers/databases"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Informational"
-            }, 
-            {
-              "field": "operationName", 
-              "equals": "Microsoft.Sql/servers/databases/write"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure sql database deletion"
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/test-act-grp'."
-    }, 
-    {
-      "name": "[parameters('networkSecurityGroups_devtestnaveen_nsg_name')]", 
+      "name": "[parameters('networkSecurityGroups_windowstestvm1_nsg_name')]", 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
       "type": "Microsoft.Network/networkSecurityGroups", 
@@ -1094,29 +265,91 @@
           }
         ]
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkSecurityGroups/devtestnaveen-nsg'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkSecurityGroups/windowstestvm1-nsg'."
+    }, 
+    {
+      "name": "[parameters('networkSecurityGroups_windowstestvm_nsg_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "RDP", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 300, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "3389", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "Port_8080", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 310, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "5985", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkSecurityGroups/windowstestvm-nsg'."
     }, 
     {
       "sku": {
-        "name": "Basic"
+        "name": "Standard"
       }, 
-      "name": "[parameters('publicIPAddresses_devtestnaveen_ip_name')]", 
+      "name": "[parameters('publicIPAddresses_windowstestvm1_ip_name')]", 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
       "type": "Microsoft.Network/publicIPAddresses", 
       "properties": {
         "publicIPAllocationMethod": "Static", 
         "publicIPAddressVersion": "IPv4", 
-        "ipAddress": "104.41.151.38", 
+        "ipAddress": "52.146.54.108", 
         "idleTimeoutInMinutes": 4, 
         "ipTags": []
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/publicIPAddresses/devtestnaveen-ip'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/publicIPAddresses/windowstestvm1-ip'."
+    }, 
+    {
+      "sku": {
+        "name": "Basic"
+      }, 
+      "name": "[parameters('publicIPAddresses_windowstestvm_ip_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/publicIPAddresses", 
+      "properties": {
+        "publicIPAllocationMethod": "Static", 
+        "publicIPAddressVersion": "IPv4", 
+        "ipAddress": "40.114.2.39", 
+        "idleTimeoutInMinutes": 4, 
+        "ipTags": []
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/publicIPAddresses/windowstestvm-ip'."
     }, 
     {
       "name": "[parameters('virtualNetworks_azurecost_vnet_name')]", 
       "apiVersion": "2019-09-01", 
-      "location": "eastus", 
+      "location": "eastus2", 
       "type": "Microsoft.Network/virtualNetworks", 
       "properties": {
         "virtualNetworkPeerings": [], 
@@ -1124,7 +357,7 @@
           {
             "name": "default", 
             "properties": {
-              "addressPrefix": "10.0.0.0/24", 
+              "addressPrefix": "10.0.1.0/24", 
               "privateEndpointNetworkPolicies": "Enabled", 
               "delegations": [], 
               "privateLinkServiceNetworkPolicies": "Enabled"
@@ -1134,12 +367,40 @@
         "enableDdosProtection": false, 
         "addressSpace": {
           "addressPrefixes": [
-            "10.0.0.0/24"
+            "10.0.1.0/24"
           ]
         }, 
         "enableVmProtection": false
       }, 
       "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/virtualNetworks/azurecost-vnet'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_azurecostvnet986_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "default", 
+            "properties": {
+              "addressPrefix": "10.0.2.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableDdosProtection": false, 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.2.0/24"
+          ]
+        }, 
+        "enableVmProtection": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/virtualNetworks/azurecostvnet986'."
     }, 
     {
       "sku": {
@@ -1154,43 +415,11 @@
       "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.RecoveryServices/vaults/vault964'."
     }, 
     {
-      "sku": {
-        "tier": "Standard", 
-        "name": "Standard_LRS"
-      }, 
-      "kind": "Storage", 
-      "name": "[parameters('storageAccounts_azurecostdiag_name')]", 
-      "apiVersion": "2019-04-01", 
-      "location": "eastus", 
-      "type": "Microsoft.Storage/storageAccounts", 
-      "properties": {
-        "supportsHttpsTrafficOnly": true, 
-        "encryption": {
-          "services": {
-            "blob": {
-              "enabled": true
-            }, 
-            "file": {
-              "enabled": true
-            }
-          }, 
-          "keySource": "Microsoft.Storage"
-        }, 
-        "networkAcls": {
-          "defaultAction": "Allow", 
-          "ipRules": [], 
-          "virtualNetworkRules": [], 
-          "bypass": "AzureServices"
-        }
-      }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag'."
-    }, 
-    {
-      "name": "[parameters('virtualMachines_devtestnaveen_name')]", 
+      "name": "[parameters('virtualMachines_windowstestvm_name')]", 
       "apiVersion": "2019-03-01", 
       "location": "eastus", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_devtestnaveen773_name'))]"
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_windowstestvm281_name'))]"
       ], 
       "type": "Microsoft.Compute/virtualMachines", 
       "properties": {
@@ -1205,134 +434,342 @@
             "offer": "WindowsServer"
           }, 
           "osDisk": {
-            "name": "backupdevtest-osdisk-20191108-094924", 
-            "diskSizeGB": 127, 
-            "managedDisk": {
-              "storageAccountType": "StandardSSD_LRS", 
-              "id": "[resourceId('Microsoft.Compute/disks', 'backupdevtest-osdisk-20191108-094924')]"
-            }, 
+            "osType": "Windows", 
             "caching": "ReadWrite", 
             "createOption": "FromImage", 
-            "osType": "Windows"
-          }, 
-          "dataDisks": [
-            {
-              "name": "[concat(parameters('virtualMachines_devtestnaveen_name'), '-osdisk-20191108-053100')]", 
-              "managedDisk": {
-                "storageAccountType": "StandardSSD_LRS", 
-                "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_devtestnaveen_name'), '-osdisk-20191108-053100'))]"
-              }, 
-              "diskSizeGB": 127, 
-              "toBeDetached": false, 
-              "createOption": "Attach", 
-              "caching": "None", 
-              "lun": 0
+            "name": "windowstbackup-osdisk-20191204-124622", 
+            "managedDisk": {
+              "id": "[resourceId('Microsoft.Compute/disks', 'windowstbackup-osdisk-20191204-124622')]"
             }
-          ]
+          }, 
+          "dataDisks": []
         }, 
         "osProfile": {
           "adminUsername": "sampleadmin", 
           "secrets": [], 
-          "computerName": "[parameters('virtualMachines_devtestnaveen_name')]", 
+          "computerName": "[parameters('virtualMachines_windowstestvm_name')]", 
           "allowExtensionOperations": true, 
           "windowsConfiguration": {
             "provisionVMAgent": true, 
             "enableAutomaticUpdates": true
           }
         }, 
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "storageUri": "https://azurecostdiag867.blob.core.windows.net/", 
+            "enabled": true
+          }
+        }, 
         "networkProfile": {
           "networkInterfaces": [
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_devtestnaveen773_name'))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_windowstestvm281_name'))]"
             }
           ]
         }
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Compute/virtualMachines/devtestnaveen'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Compute/virtualMachines/windowstestvm'."
     }, 
     {
-      "name": "[parameters('activityLogAlerts_Alert_For_Recovery_Vault_Backup_Restore_Failure_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
+      "name": "[parameters('metricAlerts_CS_Availability_azurecostdiag_80339_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
       "dependsOn": [
-        "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_vault964_name'))]"
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
       ], 
-      "type": "microsoft.insights/activityLogAlerts", 
+      "type": "microsoft.insights/metricAlerts", 
       "properties": {
         "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a"
+          "[parameters('storageAccounts_azurecostdiag_externalid')]"
         ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
         "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-            }
-          ]
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceId", 
-              "equals": "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_vault964_name'))]"
-            }, 
-            {
-              "field": "Level", 
-              "equals": "Error"
-            }
-          ]
-        }, 
-        "description": "Alert which will be created during the azure vault failures"
+        "evaluationFrequency": "PT1M"
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/Alert_For_Recovery_Vault_Backup_Restore_Failure'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-Availability-azurecostdiag-80339'."
     }, 
     {
-      "name": "[parameters('activityLogAlerts_testtaalertrulke1_name')]", 
-      "apiVersion": "2017-04-01", 
-      "location": "Global", 
+      "name": "[parameters('metricAlerts_CS_Availability_azurecostdiag867_82423_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
       "dependsOn": [
-        "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_vault964_name'))]"
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
       ], 
-      "type": "microsoft.insights/activityLogAlerts", 
+      "type": "microsoft.insights/metricAlerts", 
       "properties": {
         "scopes": [
-          "/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a"
+          "[parameters('storageAccounts_azurecostdiag867_externalid')]"
         ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
         "enabled": true, 
-        "actions": {
-          "actionGroups": [
-            {
-              "webhookProperties": {}, 
-              "actionGroupId": "[parameters('actionGroups_cstestrg_alert_externalid')]"
-            }
-          ]
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "condition": {
-          "allOf": [
-            {
-              "field": "category", 
-              "equals": "Administrative"
-            }, 
-            {
-              "field": "resourceId", 
-              "equals": "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_vault964_name'))]"
-            }
-          ]
-        }, 
-        "description": "tets"
+        "evaluationFrequency": "PT1M"
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/activityLogAlerts/testtaalertrulke1'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-Availability-azurecostdiag867-82423'."
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_devtestnaveen_nsg_name'), '/RDP')]", 
+      "name": "[parameters('metricAlerts_CS_BytesInDDoS_Rraj_backup_pip_ca16864f7bbb4e4783b1a1f94145f762_898d1_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_Rraj_backup_pip_ca16864f7bbb4e4783b1a1f94145f762_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-BytesInDDoS-Rraj_backup-pip-ca16864f7bbb4e4783b1a1f94145f762-898d1'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_BytesInDDoS_win_backup_pip_25e586a0500b4a90810280427b35732a_5456f_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_win_backup_pip_25e586a0500b4a90810280427b35732a_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-BytesInDDoS-win_backup-pip-25e586a0500b4a90810280427b35732a-5456f'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PacketsInDDoS_Rraj_backup_pip_ca16864f7bbb4e4783b1a1f94145f762_898d1_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_Rraj_backup_pip_ca16864f7bbb4e4783b1a1f94145f762_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-PacketsInDDoS-Rraj_backup-pip-ca16864f7bbb4e4783b1a1f94145f762-898d1'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PacketsInDDoS_win_backup_pip_25e586a0500b4a90810280427b35732a_5456f_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_win_backup_pip_25e586a0500b4a90810280427b35732a_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-PacketsInDDoS-win_backup-pip-25e586a0500b4a90810280427b35732a-5456f'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UsedCapacity_azurecostdiag_80339_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('storageAccounts_azurecostdiag_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-azurecostdiag-80339'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UsedCapacity_azurecostdiag867_82423_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('storageAccounts_azurecostdiag867_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-azurecostdiag867-82423'."
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_windowstestvm_nsg_name'), '/Port_8080')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkSecurityGroups/devtestnaveen-nsg/securityRules/RDP'.", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkSecurityGroups/windowstestvm-nsg/securityRules/Port_8080'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_devtestnaveen_nsg_name'))]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_windowstestvm_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 310, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "5985", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_windowstestvm1_nsg_name'), '/RDP')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkSecurityGroups/windowstestvm1-nsg/securityRules/RDP'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_windowstestvm1_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 300, 
+        "direction": "Inbound", 
+        "protocol": "TCP", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3389", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_windowstestvm_nsg_name'), '/RDP')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkSecurityGroups/windowstestvm-nsg/securityRules/RDP'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_windowstestvm_nsg_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
@@ -1359,7 +796,22 @@
       ], 
       "type": "Microsoft.Network/virtualNetworks/subnets", 
       "properties": {
-        "addressPrefix": "10.0.0.0/24", 
+        "addressPrefix": "10.0.1.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_azurecostvnet986_name'), '/default')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/virtualNetworks/azurecostvnet986/subnets/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_azurecostvnet986_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.2.0/24", 
         "privateEndpointNetworkPolicies": "Enabled", 
         "delegations": [], 
         "privateLinkServiceNetworkPolicies": "Enabled"
@@ -1368,11 +820,11 @@
     {
       "name": "[concat(parameters('vaults_vault964_name'), '/DailyPolicy')]", 
       "apiVersion": "2016-12-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/microsoft.recoveryservices/vaults/vault964/backupPolicies/DailyPolicy'.", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.RecoveryServices/vaults/vault964/backupPolicies/DailyPolicy'.", 
       "dependsOn": [
-        "[resourceId('microsoft.recoveryservices/vaults', parameters('vaults_vault964_name'))]"
+        "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_vault964_name'))]"
       ], 
-      "type": "microsoft.recoveryservices/vaults/backupPolicies", 
+      "type": "Microsoft.RecoveryServices/vaults/backupPolicies", 
       "properties": {
         "protectedItemsCount": 0, 
         "backupManagementType": "AzureIaasVM"
@@ -1381,11 +833,11 @@
     {
       "name": "[concat(parameters('vaults_vault964_name'), '/DefaultPolicy')]", 
       "apiVersion": "2016-12-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/microsoft.recoveryservices/vaults/vault964/backupPolicies/DefaultPolicy'.", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.RecoveryServices/vaults/vault964/backupPolicies/DefaultPolicy'.", 
       "dependsOn": [
-        "[resourceId('microsoft.recoveryservices/vaults', parameters('vaults_vault964_name'))]"
+        "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_vault964_name'))]"
       ], 
-      "type": "microsoft.recoveryservices/vaults/backupPolicies", 
+      "type": "Microsoft.RecoveryServices/vaults/backupPolicies", 
       "properties": {
         "protectedItemsCount": 0, 
         "backupManagementType": "AzureIaasVM"
@@ -1394,11 +846,11 @@
     {
       "name": "[concat(parameters('vaults_vault964_name'), '/HourlyLogBackup')]", 
       "apiVersion": "2016-12-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/microsoft.recoveryservices/vaults/vault964/backupPolicies/HourlyLogBackup'.", 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourcegroups/azurecost/providers/Microsoft.RecoveryServices/vaults/vault964/backupPolicies/HourlyLogBackup'.", 
       "dependsOn": [
-        "[resourceId('microsoft.recoveryservices/vaults', parameters('vaults_vault964_name'))]"
+        "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_vault964_name'))]"
       ], 
-      "type": "microsoft.recoveryservices/vaults/backupPolicies", 
+      "type": "Microsoft.RecoveryServices/vaults/backupPolicies", 
       "properties": {
         "protectedItemsCount": 0, 
         "backupManagementType": "AzureWorkload"
@@ -1418,100 +870,146 @@
       }
     }, 
     {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default'.", 
+      "name": "[parameters('metricAlerts_CS_BytesInDDoS_windowstestvm_ip_12e42_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_windowstestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
       ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "type": "microsoft.insights/metricAlerts", 
       "properties": {
-        "deleteRetentionPolicy": {
-          "enabled": false
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_windowstestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
         }, 
-        "cors": {
-          "corsRules": []
-        }
-      }
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-BytesInDDoS-windowstestvm-ip-12e42'."
     }, 
     {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/backupdevtest-9b7fac505d0e41bfb31253afd15edb54')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/backupdevtest-9b7fac505d0e41bfb31253afd15edb54'.", 
+      "name": "[parameters('metricAlerts_CS_NetworkOut_windowstestvm_ce209_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_windowstestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
       ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "type": "microsoft.insights/metricAlerts", 
       "properties": {
-        "publicAccess": "None"
-      }
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_windowstestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-NetworkOut-windowstestvm-ce209'."
     }, 
     {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-devtestwi-11a8950a-91be-4f09-9afd-6c525763807b')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-devtestwi-11a8950a-91be-4f09-9afd-6c525763807b'.", 
+      "name": "[parameters('metricAlerts_CS_PacketsInDDoS_windowstestvm_ip_12e42_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_windowstestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
       ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "type": "microsoft.insights/metricAlerts", 
       "properties": {
-        "publicAccess": "None"
-      }
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_windowstestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-PacketsInDDoS-windowstestvm-ip-12e42'."
     }, 
     {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-testvm1-16648f67-3bb3-42e4-8ae7-010d8268aab2')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-testvm1-16648f67-3bb3-42e4-8ae7-010d8268aab2'.", 
+      "name": "[parameters('metricAlerts_CS_PercentageCPU_windowstestvm_ce209_name')]", 
+      "tags": {
+        "corestack-system-manage": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_windowstestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
       ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "type": "microsoft.insights/metricAlerts", 
       "properties": {
-        "publicAccess": "None"
-      }
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_windowstestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/microsoft.insights/metricAlerts/CS-PercentageCPU-windowstestvm-ce209'."
     }, 
     {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-testvm2-0fc85a75-5e9a-4ade-9410-30f7eef06a75')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-testvm2-0fc85a75-5e9a-4ade-9410-30f7eef06a75'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('storageAccounts_azurecostdiag_name'), '/default/bootdiagnostics-testvm-30fb0e4d-b4ef-4497-ae60-1929a2b15101')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Storage/storageAccounts/azurecostdiag/blobServices/default/containers/bootdiagnostics-testvm-30fb0e4d-b4ef-4497-ae60-1929a2b15101'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_azurecostdiag_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_azurecostdiag_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
-    }, 
-    {
-      "name": "[parameters('networkInterfaces_devtestnaveen773_name')]", 
+      "name": "[parameters('networkInterfaces_windowstestvm281_name')]", 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_devtestnaveen_ip_name'))]", 
-        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_azurecost_vnet_name'), 'default')]", 
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_devtestnaveen_nsg_name'))]"
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_windowstestvm_ip_name'))]", 
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_azurecostvnet986_name'), 'default')]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_windowstestvm_nsg_name'))]"
       ], 
       "type": "Microsoft.Network/networkInterfaces", 
       "properties": {
         "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_devtestnaveen_nsg_name'))]"
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_windowstestvm_nsg_name'))]"
         }, 
         "enableIPForwarding": false, 
         "dnsSettings": {
@@ -1522,21 +1020,33 @@
             "name": "ipconfig1", 
             "properties": {
               "subnet": {
-                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_azurecost_vnet_name'), 'default')]"
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_azurecostvnet986_name'), 'default')]"
               }, 
               "primary": true, 
               "privateIPAddressVersion": "IPv4", 
               "publicIPAddress": {
-                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_devtestnaveen_ip_name'))]"
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_windowstestvm_ip_name'))]"
               }, 
               "privateIPAllocationMethod": "Dynamic", 
-              "privateIPAddress": "10.0.0.4"
+              "privateIPAddress": "10.0.2.4"
+            }
+          }, 
+          {
+            "name": "testipconfig", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_azurecostvnet986_name'), 'default')]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "primary": false, 
+              "privateIPAddress": "10.0.2.8", 
+              "privateIPAddressVersion": "IPv4"
             }
           }
         ], 
         "enableAcceleratedNetworking": false
       }, 
-      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkInterfaces/devtestnaveen773'."
+      "comments": "Generalized from resource: '/subscriptions/3ac38bda-323e-4b18-8189-d4ad6871a01a/resourceGroups/azurecost/providers/Microsoft.Network/networkInterfaces/windowstestvm281'."
     }
   ]
 }
