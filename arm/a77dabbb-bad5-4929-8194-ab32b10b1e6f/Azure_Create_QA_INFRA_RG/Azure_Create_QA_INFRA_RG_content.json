@@ -3,44 +3,288 @@
   "contentVersion": "1.0.0.0", 
   "variables": {}, 
   "parameters": {
-    "virtualNetworks_QA_INFRA_RG_VN_name": {
-      "defaultValue": "QA_INFRA_RG-VN", 
+    "metricAlerts_CS_PercentageCPU_newtestvm_f28a7_name": {
+      "defaultValue": "CS-PercentageCPU-newtestvm-f28a7", 
       "type": "String"
     }, 
-    "storageAccounts_eastusxkevl_name": {
-      "defaultValue": "eastusxkevl", 
+    "metricAlerts_CS_PacketsInDDoS_usesrv10256_pip_779f4_name": {
+      "defaultValue": "CS-PacketsInDDoS-usesrv10256-pip-779f4", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_BytesInDDoS_newtestvm_ip_50c8a_name": {
+      "defaultValue": "CS-BytesInDDoS-newtestvm-ip-50c8a", 
+      "type": "String"
+    }, 
+    "virtualMachines_srv10257_name": {
+      "defaultValue": "srv10257", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_newtestvm_nsg_name": {
+      "defaultValue": "newtestvm-nsg", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_DiskWriteOperations_Sec_srv10256_a7a3e_name": {
+      "defaultValue": "CS-DiskWriteOperations_Sec-srv10256-a7a3e", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_CPUCreditsConsumed_srv10257_867f2_name": {
+      "defaultValue": "CS-CPUCreditsConsumed-srv10257-867f2", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Egress_eastusnhoup_ff0a3_name": {
+      "defaultValue": "CS-Egress-eastusnhoup-ff0a3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_CPUCreditsConsumed_newtestvm_f28a7_name": {
+      "defaultValue": "CS-CPUCreditsConsumed-newtestvm-f28a7", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Transactions_newtestvmstorage01_6c85a_name": {
+      "defaultValue": "CS-Transactions-newtestvmstorage01-6c85a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Availability_newtestvmstorage01_6c85a_name": {
+      "defaultValue": "CS-Availability-newtestvmstorage01-6c85a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UDPPacketsInDDoS_usesrv10256_pip_779f4_name": {
+      "defaultValue": "CS-UDPPacketsInDDoS-usesrv10256-pip-779f4", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Ingress_newtestvmstorage01_6c85a_name": {
+      "defaultValue": "CS-Ingress-newtestvmstorage01-6c85a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UDPBytesInDDoS_usesrv10256_pip_779f4_name": {
+      "defaultValue": "CS-UDPBytesInDDoS-usesrv10256-pip-779f4", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UsedCapacity_eastusnhoup_ff0a3_name": {
+      "defaultValue": "CS-UsedCapacity-eastusnhoup-ff0a3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_TCPPacketsInDDoS_usesrv10256_pip_779f4_name": {
+      "defaultValue": "CS-TCPPacketsInDDoS-usesrv10256-pip-779f4", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_DiskWriteOperations_Sec_srv10257_867f2_name": {
+      "defaultValue": "CS-DiskWriteOperations_Sec-srv10257-867f2", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_PercentageCPU_srv10256_a7a3e_name": {
+      "defaultValue": "CS-PercentageCPU-srv10256-a7a3e", 
+      "type": "String"
+    }, 
+    "virtualNetworks_QA_INFRA_RG_vnet_name": {
+      "defaultValue": "QA_INFRA_RG-vnet", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UDPPacketsInDDoS_usesrv10257_pip_69ca3_name": {
+      "defaultValue": "CS-UDPPacketsInDDoS-usesrv10257-pip-69ca3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_NetworkOut_srv10257_867f2_name": {
+      "defaultValue": "CS-NetworkOut-srv10257-867f2", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Ingress_eastusnhoup_ff0a3_name": {
+      "defaultValue": "CS-Ingress-eastusnhoup-ff0a3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_SuccessE2ELatency_eastusnhoup_ff0a3_name": {
+      "defaultValue": "CS-SuccessE2ELatency-eastusnhoup-ff0a3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_PacketsInDDoS_newtestvm_ip_50c8a_name": {
+      "defaultValue": "CS-PacketsInDDoS-newtestvm-ip-50c8a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_SuccessServerLatency_eastusnhoup_ff0a3_name": {
+      "defaultValue": "CS-SuccessServerLatency-eastusnhoup-ff0a3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_TCPPacketsInDDoS_usesrv10257_pip_69ca3_name": {
+      "defaultValue": "CS-TCPPacketsInDDoS-usesrv10257-pip-69ca3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UDPBytesInDDoS_newtestvm_ip_50c8a_name": {
+      "defaultValue": "CS-UDPBytesInDDoS-newtestvm-ip-50c8a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_TCPBytesInDDoS_usesrv10256_pip_779f4_name": {
+      "defaultValue": "CS-TCPBytesInDDoS-usesrv10256-pip-779f4", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UDPBytesInDDoS_usesrv10257_pip_69ca3_name": {
+      "defaultValue": "CS-UDPBytesInDDoS-usesrv10257-pip-69ca3", 
+      "type": "String"
+    }, 
+    "storageAccounts_newtestvmstorage01_name": {
+      "defaultValue": "newtestvmstorage01", 
+      "type": "String"
+    }, 
+    "schedules_shutdown_computevm_newtestvm_name": {
+      "defaultValue": "shutdown-computevm-newtestvm", 
+      "type": "String"
+    }, 
+    "virtualMachines_newtestvm_name": {
+      "defaultValue": "newtestvm", 
+      "type": "String"
+    }, 
+    "publicIPAddresses_usesrv10256_pip_externalid": {
+      "defaultValue": "/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/publicIPAddresses/usesrv10256-pip", 
+      "type": "String"
+    }, 
+    "virtualNetworks_newtestvm_name": {
+      "defaultValue": "newtestvm", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_SuccessServerLatency_newtestvmstorage01_6c85a_name": {
+      "defaultValue": "CS-SuccessServerLatency-newtestvmstorage01-6c85a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_BytesInDDoS_usesrv10256_pip_779f4_name": {
+      "defaultValue": "CS-BytesInDDoS-usesrv10256-pip-779f4", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_SuccessE2ELatency_newtestvmstorage01_6c85a_name": {
+      "defaultValue": "CS-SuccessE2ELatency-newtestvmstorage01-6c85a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_TCPPacketsInDDoS_newtestvm_ip_50c8a_name": {
+      "defaultValue": "CS-TCPPacketsInDDoS-newtestvm-ip-50c8a", 
+      "type": "String"
+    }, 
+    "publicIPAddresses_usesrv10257_pip_name": {
+      "defaultValue": "usesrv10257-pip", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_TCPBytesInDDoS_newtestvm_ip_50c8a_name": {
+      "defaultValue": "CS-TCPBytesInDDoS-newtestvm-ip-50c8a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_NetworkOut_srv10256_a7a3e_name": {
+      "defaultValue": "CS-NetworkOut-srv10256-a7a3e", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UsedCapacity_newtestvmstorage01_6c85a_name": {
+      "defaultValue": "CS-UsedCapacity-newtestvmstorage01-6c85a", 
+      "type": "String"
+    }, 
+    "networkInterfaces_newtestvm204_name": {
+      "defaultValue": "newtestvm204", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_NetworkIn_srv10256_a7a3e_name": {
+      "defaultValue": "CS-NetworkIn-srv10256-a7a3e", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_CPUCreditsRemaining_srv10256_a7a3e_name": {
+      "defaultValue": "CS-CPUCreditsRemaining-srv10256-a7a3e", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_CPUCreditsConsumed_srv10256_a7a3e_name": {
+      "defaultValue": "CS-CPUCreditsConsumed-srv10256-a7a3e", 
+      "type": "String"
+    }, 
+    "publicIPAddresses_newtestvm_ip_name": {
+      "defaultValue": "newtestvm-ip", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_TCPBytesInDDoS_usesrv10257_pip_69ca3_name": {
+      "defaultValue": "CS-TCPBytesInDDoS-usesrv10257-pip-69ca3", 
+      "type": "String"
+    }, 
+    "networkInterfaces_srv10257_nc10257_name": {
+      "defaultValue": "srv10257-nc10257", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_NetworkIn_srv10257_867f2_name": {
+      "defaultValue": "CS-NetworkIn-srv10257-867f2", 
+      "type": "String"
+    }, 
+    "virtualMachines_srv10256_externalid": {
+      "defaultValue": "/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Compute/virtualMachines/srv10256", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_DiskReadOperations_Sec_newtestvm_f28a7_name": {
+      "defaultValue": "CS-DiskReadOperations_Sec-newtestvm-f28a7", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_NetworkOut_newtestvm_f28a7_name": {
+      "defaultValue": "CS-NetworkOut-newtestvm-f28a7", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Egress_newtestvmstorage01_6c85a_name": {
+      "defaultValue": "CS-Egress-newtestvmstorage01-6c85a", 
+      "type": "String"
+    }, 
+    "storageAccounts_eastusnhoup_name": {
+      "defaultValue": "eastusnhoup", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_PacketsInDDoS_usesrv10257_pip_69ca3_name": {
+      "defaultValue": "CS-PacketsInDDoS-usesrv10257-pip-69ca3", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_CPUCreditsRemaining_srv10257_867f2_name": {
+      "defaultValue": "CS-CPUCreditsRemaining-srv10257-867f2", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Availability_eastusnhoup_ff0a3_name": {
+      "defaultValue": "CS-Availability-eastusnhoup-ff0a3", 
+      "type": "String"
+    }, 
+    "schedules_shutdown_computevm_srv10257_name": {
+      "defaultValue": "shutdown-computevm-srv10257", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_UDPPacketsInDDoS_newtestvm_ip_50c8a_name": {
+      "defaultValue": "CS-UDPPacketsInDDoS-newtestvm-ip-50c8a", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_PercentageCPU_srv10257_867f2_name": {
+      "defaultValue": "CS-PercentageCPU-srv10257-867f2", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_DiskReadOperations_Sec_srv10256_a7a3e_name": {
+      "defaultValue": "CS-DiskReadOperations_Sec-srv10256-a7a3e", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_NetworkIn_newtestvm_f28a7_name": {
+      "defaultValue": "CS-NetworkIn-newtestvm-f28a7", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_CPUCreditsRemaining_newtestvm_f28a7_name": {
+      "defaultValue": "CS-CPUCreditsRemaining-newtestvm-f28a7", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_NSG01_name": {
+      "defaultValue": "NSG01", 
+      "type": "String"
+    }, 
+    "metricAlerts_CS_Transactions_eastusnhoup_ff0a3_name": {
+      "defaultValue": "CS-Transactions-eastusnhoup-ff0a3", 
       "type": "String"
     }, 
     "actionGroups_CS_Actiongroup_name": {
       "defaultValue": "CS-Actiongroup", 
       "type": "String"
     }, 
-    "virtualMachines_mytestvm01_name": {
-      "defaultValue": "mytestvm01", 
+    "metricAlerts_CS_DiskWriteOperations_Sec_newtestvm_f28a7_name": {
+      "defaultValue": "CS-DiskWriteOperations_Sec-newtestvm-f28a7", 
       "type": "String"
     }, 
-    "storageAccounts_mytestvm01storage01_name": {
-      "defaultValue": "mytestvm01storage01", 
+    "networkInterfaces_test_NI_name": {
+      "defaultValue": "test-NI", 
       "type": "String"
     }, 
-    "publicIPAddresses_mytestvm01_ip_name": {
-      "defaultValue": "mytestvm01-ip", 
+    "metricAlerts_CS_BytesInDDoS_usesrv10257_pip_69ca3_name": {
+      "defaultValue": "CS-BytesInDDoS-usesrv10257-pip-69ca3", 
       "type": "String"
     }, 
-    "networkSecurityGroups_NSG001_name": {
-      "defaultValue": "NSG001", 
-      "type": "String"
-    }, 
-    "networkSecurityGroups_mytestvm01_nsg_name": {
-      "defaultValue": "mytestvm01-nsg", 
-      "type": "String"
-    }, 
-    "virtualNetworks_mytestvm01_VN_name": {
-      "defaultValue": "mytestvm01-VN", 
-      "type": "String"
-    }, 
-    "networkInterfaces_mytestvm01899_name": {
-      "defaultValue": "mytestvm01899", 
+    "metricAlerts_CS_DiskReadOperations_Sec_srv10257_867f2_name": {
+      "defaultValue": "CS-DiskReadOperations_Sec-srv10257-867f2", 
       "type": "String"
     }
   }, 
@@ -50,7 +294,8 @@
       "tags": {
         "environment": "qa", 
         "corestack-system-manage": "true", 
-        "auto_shutdown": "true"
+        "auto_shutdown": "true", 
+        "backup": "true"
       }, 
       "apiVersion": "2019-03-01", 
       "location": "Global", 
@@ -62,13 +307,13 @@
         "enabled": true, 
         "itsmReceivers": [], 
         "azureFunctionReceivers": [], 
-        "groupShortName": "YXKUWJUG", 
+        "groupShortName": "NU1O47EC", 
         "smsReceivers": [], 
         "azureAppPushReceivers": [], 
         "voiceReceivers": [], 
         "webhookReceivers": [
           {
-            "serviceUri": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5ddf715a765aa0681e06cca6&alert_type=monitoring", 
+            "serviceUri": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5df9e20f765aa0eda4c63d1d&alert_type=monitoring", 
             "name": "[parameters('actionGroups_CS_Actiongroup_name')]", 
             "useCommonAlertSchema": false
           }
@@ -77,12 +322,34 @@
       "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/actionGroups/CS-Actiongroup'."
     }, 
     {
-      "name": "[parameters('networkSecurityGroups_mytestvm01_nsg_name')]", 
+      "name": "[parameters('networkSecurityGroups_newtestvm_nsg_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
       "type": "Microsoft.Network/networkSecurityGroups", 
       "properties": {
         "securityRules": [
+          {
+            "name": "default-allow-ssh", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1000, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
           {
             "name": "Port_8080", 
             "properties": {
@@ -116,67 +383,17 @@
               "destinationAddressPrefix": "*", 
               "sourceAddressPrefix": "*"
             }
-          }, 
-          {
-            "name": "HTTPS", 
-            "properties": {
-              "sourceAddressPrefixes": [], 
-              "priority": 1030, 
-              "direction": "Inbound", 
-              "protocol": "*", 
-              "destinationPortRanges": [], 
-              "access": "Allow", 
-              "destinationAddressPrefixes": [], 
-              "destinationPortRange": "443", 
-              "sourcePortRange": "*", 
-              "sourcePortRanges": [], 
-              "destinationAddressPrefix": "*", 
-              "sourceAddressPrefix": "*"
-            }
-          }, 
-          {
-            "name": "RDP", 
-            "properties": {
-              "sourceAddressPrefixes": [], 
-              "priority": 1040, 
-              "direction": "Inbound", 
-              "protocol": "*", 
-              "destinationPortRanges": [], 
-              "access": "Allow", 
-              "destinationAddressPrefixes": [], 
-              "destinationPortRange": "3389", 
-              "sourcePortRange": "*", 
-              "sourcePortRanges": [], 
-              "destinationAddressPrefix": "*", 
-              "sourceAddressPrefix": "*"
-            }
-          }, 
-          {
-            "name": "default-allow-ssh", 
-            "properties": {
-              "sourceAddressPrefixes": [], 
-              "priority": 1000, 
-              "direction": "Inbound", 
-              "protocol": "TCP", 
-              "destinationPortRanges": [], 
-              "access": "Allow", 
-              "destinationAddressPrefixes": [], 
-              "destinationPortRange": "22", 
-              "sourcePortRange": "*", 
-              "sourcePortRanges": [], 
-              "destinationAddressPrefix": "*", 
-              "sourceAddressPrefix": "*"
-            }
           }
         ]
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/newtestvm-nsg'."
     }, 
     {
-      "name": "[parameters('networkSecurityGroups_NSG001_name')]", 
+      "name": "[parameters('networkSecurityGroups_NSG01_name')]", 
       "tags": {
         "environment": "qa", 
-        "auto_shutdown": "true"
+        "auto_shutdown": "true", 
+        "backup": "true"
       }, 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
@@ -218,27 +435,10 @@
             }
           }, 
           {
-            "name": "HTTPS", 
-            "properties": {
-              "sourceAddressPrefixes": [], 
-              "priority": 120, 
-              "direction": "Inbound", 
-              "protocol": "*", 
-              "destinationPortRanges": [], 
-              "access": "Allow", 
-              "destinationAddressPrefixes": [], 
-              "destinationPortRange": "443", 
-              "sourcePortRange": "*", 
-              "sourcePortRanges": [], 
-              "destinationAddressPrefix": "*", 
-              "sourceAddressPrefix": "*"
-            }
-          }, 
-          {
             "name": "SSH", 
             "properties": {
               "sourceAddressPrefixes": [], 
-              "priority": 130, 
+              "priority": 120, 
               "direction": "Inbound", 
               "protocol": "*", 
               "destinationPortRanges": [], 
@@ -255,7 +455,7 @@
             "name": "RDP", 
             "properties": {
               "sourceAddressPrefixes": [], 
-              "priority": 140, 
+              "priority": 130, 
               "direction": "Inbound", 
               "protocol": "*", 
               "destinationPortRanges": [], 
@@ -267,61 +467,81 @@
               "destinationAddressPrefix": "*", 
               "sourceAddressPrefix": "*"
             }
+          }, 
+          {
+            "name": "HTTPS", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 140, 
+              "direction": "Inbound", 
+              "protocol": "*", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "443", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
           }
         ]
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG01'."
     }, 
     {
       "sku": {
         "name": "Basic"
       }, 
-      "name": "[parameters('publicIPAddresses_mytestvm01_ip_name')]", 
+      "name": "[parameters('publicIPAddresses_newtestvm_ip_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
       "type": "Microsoft.Network/publicIPAddresses", 
       "properties": {
-        "publicIPAllocationMethod": "Dynamic", 
+        "publicIPAllocationMethod": "Static", 
         "publicIPAddressVersion": "IPv4", 
-        "ipAddress": "40.121.199.117", 
+        "ipAddress": "13.82.58.245", 
         "idleTimeoutInMinutes": 4, 
         "ipTags": []
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/publicIPAddresses/mytestvm01-ip'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/publicIPAddresses/newtestvm-ip'."
     }, 
     {
-      "name": "[parameters('virtualNetworks_mytestvm01_VN_name')]", 
+      "sku": {
+        "name": "Standard"
+      }, 
+      "name": "[parameters('publicIPAddresses_usesrv10257_pip_name')]", 
+      "tags": {
+        "autoshutdown": "true", 
+        "auto_shutdown": "true", 
+        "testtag01": "test1", 
+        "cs-reference": "5df9e20f765aa0eda4c63d1d,10857", 
+        "environment": "qa", 
+        "backup": "true"
+      }, 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
-      "type": "Microsoft.Network/virtualNetworks", 
+      "type": "Microsoft.Network/publicIPAddresses", 
       "properties": {
-        "virtualNetworkPeerings": [], 
-        "subnets": [
-          {
-            "name": "default", 
-            "properties": {
-              "addressPrefix": "10.0.0.0/24", 
-              "privateEndpointNetworkPolicies": "Enabled", 
-              "delegations": [], 
-              "privateLinkServiceNetworkPolicies": "Enabled"
-            }
-          }
-        ], 
-        "enableDdosProtection": false, 
-        "addressSpace": {
-          "addressPrefixes": [
-            "10.0.0.0/24"
-          ]
-        }, 
-        "enableVmProtection": false
+        "publicIPAllocationMethod": "Static", 
+        "publicIPAddressVersion": "IPv4", 
+        "ipAddress": "52.142.16.108", 
+        "idleTimeoutInMinutes": 4, 
+        "ipTags": []
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/mytestvm01-VN'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/publicIPAddresses/usesrv10257-pip'."
     }, 
     {
-      "name": "[parameters('virtualNetworks_QA_INFRA_RG_VN_name')]", 
+      "name": "[parameters('virtualNetworks_newtestvm_name')]", 
       "tags": {
         "environment": "qa", 
-        "auto_shutdown": "true"
+        "auto_shutdown": "true", 
+        "backup": "true"
       }, 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
@@ -347,7 +567,35 @@
         }, 
         "enableVmProtection": false
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/QA_INFRA_RG-VN'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/newtestvm'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_QA_INFRA_RG_vnet_name')]", 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "[concat(parameters('virtualNetworks_QA_INFRA_RG_vnet_name'), '-subnet')]", 
+            "properties": {
+              "addressPrefix": "10.0.0.0/16", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableDdosProtection": false, 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.0.0.0/16"
+          ]
+        }, 
+        "enableVmProtection": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/QA_INFRA_RG-vnet'."
     }, 
     {
       "sku": {
@@ -355,7 +603,7 @@
         "name": "Standard_LRS"
       }, 
       "kind": "Storage", 
-      "name": "[parameters('storageAccounts_eastusxkevl_name')]", 
+      "name": "[parameters('storageAccounts_eastusnhoup_name')]", 
       "apiVersion": "2019-04-01", 
       "location": "eastus", 
       "type": "Microsoft.Storage/storageAccounts", 
@@ -379,7 +627,7 @@
           "bypass": "AzureServices"
         }
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/eastusxkevl'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/eastusnhoup'."
     }, 
     {
       "sku": {
@@ -387,7 +635,12 @@
         "name": "Standard_LRS"
       }, 
       "kind": "Storage", 
-      "name": "[parameters('storageAccounts_mytestvm01storage01_name')]", 
+      "name": "[parameters('storageAccounts_newtestvmstorage01_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
       "apiVersion": "2019-04-01", 
       "location": "eastus", 
       "type": "Microsoft.Storage/storageAccounts", 
@@ -411,14 +664,516 @@
           "bypass": "AzureServices"
         }
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/mytestvm01storage01'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/newtestvmstorage01'."
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/default-allow-ssh')]", 
-      "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/default-allow-ssh'.", 
+      "name": "[parameters('schedules_shutdown_computevm_newtestvm_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-09-15", 
+      "location": "eastus", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+      ], 
+      "type": "microsoft.devtestlab/schedules", 
+      "properties": {
+        "status": "Enabled", 
+        "timeZoneId": "India Standard Time", 
+        "notificationSettings": {
+          "status": "Enabled", 
+          "timeInMinutes": 60, 
+          "webhookUrl": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5df9e20f765aa0eda4c63d1d&alert_type=auto_shutdown"
+        }, 
+        "dailyRecurrence": {
+          "time": "2100"
+        }, 
+        "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "taskType": "ComputeVmShutdownTask"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourcegroups/qa_infra_rg/providers/microsoft.devtestlab/schedules/shutdown-computevm-newtestvm'."
+    }, 
+    {
+      "name": "[parameters('schedules_shutdown_computevm_srv10257_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-09-15", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+      ], 
+      "type": "microsoft.devtestlab/schedules", 
+      "properties": {
+        "status": "Enabled", 
+        "timeZoneId": "India Standard Time", 
+        "notificationSettings": {
+          "status": "Enabled", 
+          "timeInMinutes": 60, 
+          "webhookUrl": "https://6wevhhbuyk.execute-api.us-east-1.amazonaws.com/LocalQAStageName/alerts?service_account_id=5df9e20f765aa0eda4c63d1d&alert_type=auto_shutdown"
+        }, 
+        "dailyRecurrence": {
+          "time": "2100"
+        }, 
+        "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "taskType": "ComputeVmShutdownTask"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourcegroups/qa_infra_rg/providers/microsoft.devtestlab/schedules/shutdown-computevm-srv10257'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_BytesInDDoS_usesrv10256_pip_779f4_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_usesrv10256_pip_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-BytesInDDoS-usesrv10256-pip-779f4'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_CPUCreditsConsumed_srv10256_a7a3e_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('virtualMachines_srv10256_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT15M", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-CPUCreditsConsumed-srv10256-a7a3e'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_CPUCreditsRemaining_srv10256_a7a3e_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('virtualMachines_srv10256_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT15M", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-CPUCreditsRemaining-srv10256-a7a3e'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_DiskReadOperations_Sec_srv10256_a7a3e_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('virtualMachines_srv10256_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-DiskReadOperations_Sec-srv10256-a7a3e'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_DiskWriteOperations_Sec_srv10256_a7a3e_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('virtualMachines_srv10256_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-DiskWriteOperations_Sec-srv10256-a7a3e'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_NetworkIn_srv10256_a7a3e_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('virtualMachines_srv10256_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-NetworkIn-srv10256-a7a3e'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_NetworkOut_srv10256_a7a3e_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('virtualMachines_srv10256_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-NetworkOut-srv10256-a7a3e'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PacketsInDDoS_usesrv10256_pip_779f4_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_usesrv10256_pip_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-PacketsInDDoS-usesrv10256-pip-779f4'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PercentageCPU_srv10256_a7a3e_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('virtualMachines_srv10256_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-PercentageCPU-srv10256-a7a3e'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_TCPBytesInDDoS_usesrv10256_pip_779f4_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_usesrv10256_pip_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-TCPBytesInDDoS-usesrv10256-pip-779f4'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_TCPPacketsInDDoS_usesrv10256_pip_779f4_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_usesrv10256_pip_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-TCPPacketsInDDoS-usesrv10256-pip-779f4'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UDPBytesInDDoS_usesrv10256_pip_779f4_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_usesrv10256_pip_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UDPBytesInDDoS-usesrv10256-pip-779f4'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UDPPacketsInDDoS_usesrv10256_pip_779f4_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[parameters('publicIPAddresses_usesrv10256_pip_externalid')]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UDPPacketsInDDoS-usesrv10256-pip-779f4'."
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_newtestvm_nsg_name'), '/default-allow-ssh')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/newtestvm-nsg/securityRules/default-allow-ssh'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_newtestvm_nsg_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
@@ -437,11 +1192,11 @@
       }
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/HTTP')]", 
+      "name": "[concat(parameters('networkSecurityGroups_newtestvm_nsg_name'), '/HTTP')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/HTTP'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/newtestvm-nsg/securityRules/HTTP'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_newtestvm_nsg_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
@@ -460,11 +1215,11 @@
       }
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/HTTP')]", 
+      "name": "[concat(parameters('networkSecurityGroups_NSG01_name'), '/HTTP')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/HTTP'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG01/securityRules/HTTP'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
@@ -483,16 +1238,16 @@
       }
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/HTTPS')]", 
+      "name": "[concat(parameters('networkSecurityGroups_NSG01_name'), '/HTTPS')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/HTTPS'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG01/securityRules/HTTPS'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
         "sourceAddressPrefixes": [], 
-        "priority": 1030, 
+        "priority": 140, 
         "direction": "Inbound", 
         "protocol": "*", 
         "destinationPortRanges": [], 
@@ -506,34 +1261,11 @@
       }
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/HTTPS')]", 
+      "name": "[concat(parameters('networkSecurityGroups_newtestvm_nsg_name'), '/Port_8080')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/HTTPS'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/newtestvm-nsg/securityRules/Port_8080'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
-      ], 
-      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
-      "properties": {
-        "sourceAddressPrefixes": [], 
-        "priority": 120, 
-        "direction": "Inbound", 
-        "protocol": "*", 
-        "destinationPortRanges": [], 
-        "access": "Allow", 
-        "destinationAddressPrefixes": [], 
-        "destinationPortRange": "443", 
-        "sourcePortRange": "*", 
-        "sourcePortRanges": [], 
-        "destinationAddressPrefix": "*", 
-        "sourceAddressPrefix": "*"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/Port_8080')]", 
-      "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/Port_8080'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_newtestvm_nsg_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
@@ -552,11 +1284,11 @@
       }
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/Port_8080')]", 
+      "name": "[concat(parameters('networkSecurityGroups_NSG01_name'), '/Port_8080')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/Port_8080'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG01/securityRules/Port_8080'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
@@ -575,62 +1307,39 @@
       }
     }, 
     {
-      "name": "[concat(parameters('networkSecurityGroups_mytestvm01_nsg_name'), '/RDP')]", 
+      "name": "[concat(parameters('networkSecurityGroups_NSG01_name'), '/RDP')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/mytestvm01-nsg/securityRules/RDP'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG01/securityRules/RDP'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
-      ], 
-      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
-      "properties": {
-        "sourceAddressPrefixes": [], 
-        "priority": 1040, 
-        "direction": "Inbound", 
-        "protocol": "*", 
-        "destinationPortRanges": [], 
-        "access": "Allow", 
-        "destinationAddressPrefixes": [], 
-        "destinationPortRange": "3389", 
-        "sourcePortRange": "*", 
-        "sourcePortRanges": [], 
-        "destinationAddressPrefix": "*", 
-        "sourceAddressPrefix": "*"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/RDP')]", 
-      "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/RDP'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
-      ], 
-      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
-      "properties": {
-        "sourceAddressPrefixes": [], 
-        "priority": 140, 
-        "direction": "Inbound", 
-        "protocol": "*", 
-        "destinationPortRanges": [], 
-        "access": "Allow", 
-        "destinationAddressPrefixes": [], 
-        "destinationPortRange": "3389", 
-        "sourcePortRange": "*", 
-        "sourcePortRanges": [], 
-        "destinationAddressPrefix": "*", 
-        "sourceAddressPrefix": "*"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('networkSecurityGroups_NSG001_name'), '/SSH')]", 
-      "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG001/securityRules/SSH'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG001_name'))]"
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
       ], 
       "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
       "properties": {
         "sourceAddressPrefixes": [], 
         "priority": 130, 
+        "direction": "Inbound", 
+        "protocol": "*", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3389", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_NSG01_name'), '/SSH')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkSecurityGroups/NSG01/securityRules/SSH'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 120, 
         "direction": "Inbound", 
         "protocol": "*", 
         "destinationPortRanges": [], 
@@ -644,26 +1353,11 @@
       }
     }, 
     {
-      "name": "[concat(parameters('virtualNetworks_mytestvm01_VN_name'), '/default')]", 
+      "name": "[concat(parameters('virtualNetworks_newtestvm_name'), '/default')]", 
       "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/mytestvm01-VN/subnets/default'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/newtestvm/subnets/default'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_mytestvm01_VN_name'))]"
-      ], 
-      "type": "Microsoft.Network/virtualNetworks/subnets", 
-      "properties": {
-        "addressPrefix": "10.0.0.0/24", 
-        "privateEndpointNetworkPolicies": "Enabled", 
-        "delegations": [], 
-        "privateLinkServiceNetworkPolicies": "Enabled"
-      }
-    }, 
-    {
-      "name": "[concat(parameters('virtualNetworks_QA_INFRA_RG_VN_name'), '/default')]", 
-      "apiVersion": "2019-09-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/QA_INFRA_RG-VN/subnets/default'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_QA_INFRA_RG_VN_name'))]"
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_newtestvm_name'))]"
       ], 
       "type": "Microsoft.Network/virtualNetworks/subnets", 
       "properties": {
@@ -674,14 +1368,29 @@
       }
     }, 
     {
+      "name": "[concat(parameters('virtualNetworks_QA_INFRA_RG_vnet_name'), '/', parameters('virtualNetworks_QA_INFRA_RG_vnet_name'), '-subnet')]", 
+      "apiVersion": "2019-09-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/virtualNetworks/QA_INFRA_RG-vnet/subnets/QA_INFRA_RG-vnet-subnet'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_QA_INFRA_RG_vnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.0.0.0/16", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
       "sku": {
         "name": "Standard_LRS"
       }, 
-      "name": "[concat(parameters('storageAccounts_eastusxkevl_name'), '/default')]", 
+      "name": "[concat(parameters('storageAccounts_eastusnhoup_name'), '/default')]", 
       "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/eastusxkevl/blobServices/default'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/eastusnhoup/blobServices/default'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusxkevl_name'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
       ], 
       "type": "Microsoft.Storage/storageAccounts/blobServices", 
       "properties": {
@@ -697,11 +1406,11 @@
       "sku": {
         "name": "Standard_LRS"
       }, 
-      "name": "[concat(parameters('storageAccounts_mytestvm01storage01_name'), '/default')]", 
+      "name": "[concat(parameters('storageAccounts_newtestvmstorage01_name'), '/default')]", 
       "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/mytestvm01storage01/blobServices/default'.", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/newtestvmstorage01/blobServices/default'.", 
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_mytestvm01storage01_name'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
       ], 
       "type": "Microsoft.Storage/storageAccounts/blobServices", 
       "properties": {
@@ -714,12 +1423,1560 @@
       }
     }, 
     {
-      "name": "[parameters('virtualMachines_mytestvm01_name')]", 
+      "name": "[parameters('virtualMachines_srv10257_name')]", 
+      "tags": {
+        "autoshutdown": "true", 
+        "auto_shutdown": "true", 
+        "testtag01": "test1", 
+        "cs-reference": "5df9e20f765aa0eda4c63d1d,10857", 
+        "environment": "qa", 
+        "backup": "true"
+      }, 
       "apiVersion": "2019-03-01", 
       "location": "eastus", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_mytestvm01899_name'))]", 
-        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_mytestvm01storage01_name'))]"
+        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_srv10257_nc10257_name'))]"
+      ], 
+      "type": "Microsoft.Compute/virtualMachines", 
+      "properties": {
+        "hardwareProfile": {
+          "vmSize": "Standard_B1ls"
+        }, 
+        "storageProfile": {
+          "imageReference": {
+            "sku": "16.04-LTS", 
+            "publisher": "Canonical", 
+            "version": "16.04.201801220", 
+            "offer": "UbuntuServer"
+          }, 
+          "osDisk": {
+            "name": "[parameters('virtualMachines_srv10257_name')]", 
+            "diskSizeGB": 30, 
+            "caching": "ReadWrite", 
+            "createOption": "FromImage", 
+            "osType": "Linux", 
+            "vhd": {
+              "uri": "[concat('https://', parameters('storageAccounts_newtestvmstorage01_name'), concat('.blob.core.windows.net/vhds/', parameters('virtualMachines_srv10257_name'), '.vhd'))]"
+            }
+          }, 
+          "dataDisks": []
+        }, 
+        "osProfile": {
+          "adminUsername": "azureuser", 
+          "secrets": [], 
+          "computerName": "[parameters('virtualMachines_srv10257_name')]", 
+          "linuxConfiguration": {
+            "provisionVMAgent": true, 
+            "disablePasswordAuthentication": false
+          }, 
+          "allowExtensionOperations": true
+        }, 
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_srv10257_nc10257_name'))]", 
+              "properties": {
+                "primary": true
+              }
+            }
+          ]
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Compute/virtualMachines/srv10257'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Availability_eastusnhoup_ff0a3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Availability-eastusnhoup-ff0a3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Availability_newtestvmstorage01_6c85a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Availability-newtestvmstorage01-6c85a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_BytesInDDoS_newtestvm_ip_50c8a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-BytesInDDoS-newtestvm-ip-50c8a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_BytesInDDoS_usesrv10257_pip_69ca3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-BytesInDDoS-usesrv10257-pip-69ca3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_CPUCreditsConsumed_newtestvm_f28a7_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT15M", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-CPUCreditsConsumed-newtestvm-f28a7'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_CPUCreditsConsumed_srv10257_867f2_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT15M", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-CPUCreditsConsumed-srv10257-867f2'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_CPUCreditsRemaining_newtestvm_f28a7_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT15M", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-CPUCreditsRemaining-newtestvm-f28a7'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_CPUCreditsRemaining_srv10257_867f2_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT15M", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-CPUCreditsRemaining-srv10257-867f2'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_DiskReadOperations_Sec_newtestvm_f28a7_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-DiskReadOperations_Sec-newtestvm-f28a7'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_DiskReadOperations_Sec_srv10257_867f2_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-DiskReadOperations_Sec-srv10257-867f2'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_DiskWriteOperations_Sec_newtestvm_f28a7_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-DiskWriteOperations_Sec-newtestvm-f28a7'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_DiskWriteOperations_Sec_srv10257_867f2_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-DiskWriteOperations_Sec-srv10257-867f2'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Egress_eastusnhoup_ff0a3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Egress-eastusnhoup-ff0a3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Egress_newtestvmstorage01_6c85a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Egress-newtestvmstorage01-6c85a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Ingress_eastusnhoup_ff0a3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Ingress-eastusnhoup-ff0a3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Ingress_newtestvmstorage01_6c85a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Ingress-newtestvmstorage01-6c85a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_NetworkIn_newtestvm_f28a7_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-NetworkIn-newtestvm-f28a7'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_NetworkIn_srv10257_867f2_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-NetworkIn-srv10257-867f2'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_NetworkOut_newtestvm_f28a7_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-NetworkOut-newtestvm-f28a7'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_NetworkOut_srv10257_867f2_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-NetworkOut-srv10257-867f2'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PacketsInDDoS_newtestvm_ip_50c8a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-PacketsInDDoS-newtestvm-ip-50c8a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PacketsInDDoS_usesrv10257_pip_69ca3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-PacketsInDDoS-usesrv10257-pip-69ca3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PercentageCPU_newtestvm_f28a7_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_newtestvm_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-PercentageCPU-newtestvm-f28a7'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_PercentageCPU_srv10257_867f2_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_srv10257_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-PercentageCPU-srv10257-867f2'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_SuccessE2ELatency_eastusnhoup_ff0a3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-SuccessE2ELatency-eastusnhoup-ff0a3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_SuccessE2ELatency_newtestvmstorage01_6c85a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-SuccessE2ELatency-newtestvmstorage01-6c85a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_SuccessServerLatency_eastusnhoup_ff0a3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-SuccessServerLatency-eastusnhoup-ff0a3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_SuccessServerLatency_newtestvmstorage01_6c85a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-SuccessServerLatency-newtestvmstorage01-6c85a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_TCPBytesInDDoS_newtestvm_ip_50c8a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-TCPBytesInDDoS-newtestvm-ip-50c8a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_TCPBytesInDDoS_usesrv10257_pip_69ca3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-TCPBytesInDDoS-usesrv10257-pip-69ca3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_TCPPacketsInDDoS_newtestvm_ip_50c8a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-TCPPacketsInDDoS-newtestvm-ip-50c8a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_TCPPacketsInDDoS_usesrv10257_pip_69ca3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-TCPPacketsInDDoS-usesrv10257-pip-69ca3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Transactions_eastusnhoup_ff0a3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Transactions-eastusnhoup-ff0a3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_Transactions_newtestvmstorage01_6c85a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-Transactions-newtestvmstorage01-6c85a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UDPBytesInDDoS_newtestvm_ip_50c8a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UDPBytesInDDoS-newtestvm-ip-50c8a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UDPBytesInDDoS_usesrv10257_pip_69ca3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UDPBytesInDDoS-usesrv10257-pip-69ca3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UDPPacketsInDDoS_newtestvm_ip_50c8a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UDPPacketsInDDoS-newtestvm-ip-50c8a'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UDPPacketsInDDoS_usesrv10257_pip_69ca3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UDPPacketsInDDoS-usesrv10257-pip-69ca3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UsedCapacity_eastusnhoup_ff0a3_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-eastusnhoup-ff0a3'."
+    }, 
+    {
+      "name": "[parameters('metricAlerts_CS_UsedCapacity_newtestvmstorage01_6c85a_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "corestack-system-manage": "true", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2018-03-01", 
+      "location": "global", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]", 
+        "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+      ], 
+      "type": "microsoft.insights/metricAlerts", 
+      "properties": {
+        "scopes": [
+          "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+        ], 
+        "description": "Request body for creating alert rule.", 
+        "severity": 3, 
+        "enabled": true, 
+        "windowSize": "PT1H", 
+        "actions": [
+          {
+            "actionGroupId": "[resourceId('microsoft.insights/actionGroups', parameters('actionGroups_CS_Actiongroup_name'))]"
+          }
+        ], 
+        "criteria": {
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+        }, 
+        "evaluationFrequency": "PT1M"
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-newtestvmstorage01-6c85a'."
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_test_NI_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_newtestvm_name'), 'default')]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
+        }, 
+        "enableIPForwarding": false, 
+        "dnsSettings": {
+          "dnsServers": []
+        }, 
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_newtestvm_name'), 'default')]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "primary": true, 
+              "privateIPAddress": "10.1.0.5", 
+              "privateIPAddressVersion": "IPv4"
+            }
+          }
+        ], 
+        "enableAcceleratedNetworking": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkInterfaces/test-NI'."
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_newtestvmstorage01_name'), '/default/bootdiagnostics-newtestvm-63feabc6-15f3-4c4d-aafd-a7de8595431c')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/newtestvmstorage01/blobServices/default/containers/bootdiagnostics-newtestvm-63feabc6-15f3-4c4d-aafd-a7de8595431c'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_newtestvmstorage01_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_eastusnhoup_name'), '/default/vhds')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/eastusnhoup/blobServices/default/containers/vhds'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_eastusnhoup_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_eastusnhoup_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_newtestvmstorage01_name'), '/default/vhds')]", 
+      "apiVersion": "2019-04-01", 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/newtestvmstorage01/blobServices/default/containers/vhds'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_newtestvmstorage01_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }, 
+    {
+      "name": "[parameters('virtualMachines_newtestvm_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2019-03-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_newtestvm204_name'))]", 
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_test_NI_name'))]", 
+        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_newtestvmstorage01_name'))]"
       ], 
       "type": "Microsoft.Compute/virtualMachines", 
       "properties": {
@@ -734,11 +2991,11 @@
             "offer": "UbuntuServer"
           }, 
           "osDisk": {
-            "name": "[concat(parameters('virtualMachines_mytestvm01_name'), '_OsDisk_1_44903014b04f4ad5bad5615c6f5b550c')]", 
+            "name": "[concat(parameters('virtualMachines_newtestvm_name'), '_disk1_23e71eb56135487f82e222f78fb0c516')]", 
             "diskSizeGB": 30, 
             "managedDisk": {
               "storageAccountType": "Standard_LRS", 
-              "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_mytestvm01_name'), '_OsDisk_1_44903014b04f4ad5bad5615c6f5b550c'))]"
+              "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_newtestvm_name'), '_disk1_23e71eb56135487f82e222f78fb0c516'))]"
             }, 
             "caching": "ReadWrite", 
             "createOption": "FromImage", 
@@ -747,9 +3004,9 @@
           "dataDisks": []
         }, 
         "osProfile": {
-          "adminUsername": "[parameters('virtualMachines_mytestvm01_name')]", 
+          "adminUsername": "[parameters('virtualMachines_newtestvm_name')]", 
           "secrets": [], 
-          "computerName": "[parameters('virtualMachines_mytestvm01_name')]", 
+          "computerName": "[parameters('virtualMachines_newtestvm_name')]", 
           "linuxConfiguration": {
             "provisionVMAgent": true, 
             "disablePasswordAuthentication": false
@@ -758,46 +3015,47 @@
         }, 
         "diagnosticsProfile": {
           "bootDiagnostics": {
-            "storageUri": "[concat('https://', parameters('storageAccounts_mytestvm01storage01_name'), '.blob.core.windows.net/')]", 
+            "storageUri": "[concat('https://', parameters('storageAccounts_newtestvmstorage01_name'), '.blob.core.windows.net/')]", 
             "enabled": true
           }
         }, 
         "networkProfile": {
           "networkInterfaces": [
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_mytestvm01899_name'))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_newtestvm204_name'))]", 
+              "properties": {
+                "primary": true
+              }
+            }, 
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_test_NI_name'))]", 
+              "properties": {
+                "primary": false
+              }
             }
           ]
         }
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Compute/virtualMachines/mytestvm01'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Compute/virtualMachines/newtestvm'."
     }, 
     {
-      "name": "[concat(parameters('storageAccounts_mytestvm01storage01_name'), '/default/bootdiagnostics-mytestvm0-b093757d-d6aa-4b79-88ce-0107efd44fe1')]", 
-      "apiVersion": "2019-04-01", 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Storage/storageAccounts/mytestvm01storage01/blobServices/default/containers/bootdiagnostics-mytestvm0-b093757d-d6aa-4b79-88ce-0107efd44fe1'.", 
-      "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_mytestvm01storage01_name'), 'default')]", 
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_mytestvm01storage01_name'))]"
-      ], 
-      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
-      "properties": {
-        "publicAccess": "None"
-      }
-    }, 
-    {
-      "name": "[parameters('networkInterfaces_mytestvm01899_name')]", 
+      "name": "[parameters('networkInterfaces_newtestvm204_name')]", 
+      "tags": {
+        "environment": "qa", 
+        "auto_shutdown": "true", 
+        "backup": "true"
+      }, 
       "apiVersion": "2019-09-01", 
       "location": "eastus", 
       "dependsOn": [
-        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_mytestvm01_ip_name'))]", 
-        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_mytestvm01_VN_name'), 'default')]", 
-        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]", 
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_newtestvm_name'), 'default')]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_newtestvm_nsg_name'))]"
       ], 
       "type": "Microsoft.Network/networkInterfaces", 
       "properties": {
         "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mytestvm01_nsg_name'))]"
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_newtestvm_nsg_name'))]"
         }, 
         "enableIPForwarding": false, 
         "dnsSettings": {
@@ -808,12 +3066,59 @@
             "name": "ipconfig1", 
             "properties": {
               "subnet": {
-                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_mytestvm01_VN_name'), 'default')]"
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_newtestvm_name'), 'default')]"
               }, 
               "primary": true, 
               "privateIPAddressVersion": "IPv4", 
               "publicIPAddress": {
-                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_mytestvm01_ip_name'))]"
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_newtestvm_ip_name'))]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "privateIPAddress": "10.1.0.4"
+            }
+          }
+        ], 
+        "enableAcceleratedNetworking": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkInterfaces/newtestvm204'."
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_srv10257_nc10257_name')]", 
+      "tags": {
+        "autoshutdown": "true", 
+        "auto_shutdown": "true", 
+        "testtag01": "test1", 
+        "cs-reference": "5df9e20f765aa0eda4c63d1d,10857", 
+        "environment": "qa", 
+        "backup": "true"
+      }, 
+      "apiVersion": "2019-09-01", 
+      "location": "eastus", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]", 
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_QA_INFRA_RG_vnet_name'), concat(parameters('virtualNetworks_QA_INFRA_RG_vnet_name'), '-subnet'))]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_NSG01_name'))]"
+        }, 
+        "enableIPForwarding": false, 
+        "dnsSettings": {
+          "dnsServers": []
+        }, 
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_QA_INFRA_RG_vnet_name'), concat(parameters('virtualNetworks_QA_INFRA_RG_vnet_name'), '-subnet'))]"
+              }, 
+              "primary": true, 
+              "privateIPAddressVersion": "IPv4", 
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_usesrv10257_pip_name'))]"
               }, 
               "privateIPAllocationMethod": "Dynamic", 
               "privateIPAddress": "10.0.0.4"
@@ -822,7 +3127,7 @@
         ], 
         "enableAcceleratedNetworking": false
       }, 
-      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkInterfaces/mytestvm01899'."
+      "comments": "Generalized from resource: '/subscriptions/a77dabbb-bad5-4929-8194-ab32b10b1e6f/resourceGroups/QA_INFRA_RG/providers/Microsoft.Network/networkInterfaces/srv10257-nc10257'."
     }
   ]
 }
