@@ -103,7 +103,7 @@
     }, 
     {
       "name": "[parameters('networkSecurityGroups_testnsg_name')]", 
-      "apiVersion": "2019-09-01", 
+      "apiVersion": "2019-11-01", 
       "location": "eastus", 
       "type": "Microsoft.Network/networkSecurityGroups", 
       "properties": {
@@ -151,7 +151,7 @@
       "tags": {
         "environment": "Terraform Demo"
       }, 
-      "apiVersion": "2019-09-01", 
+      "apiVersion": "2019-11-01", 
       "location": "eastus", 
       "type": "Microsoft.Network/virtualNetworks", 
       "properties": {
@@ -204,7 +204,7 @@
       }, 
       "kind": "Storage", 
       "name": "[parameters('storageAccounts_diag276f6bbed2562354_name')]", 
-      "apiVersion": "2019-04-01", 
+      "apiVersion": "2019-06-01", 
       "location": "eastus", 
       "type": "Microsoft.Storage/storageAccounts", 
       "properties": {
@@ -212,9 +212,11 @@
         "encryption": {
           "services": {
             "blob": {
+              "keyType": "Account", 
               "enabled": true
             }, 
             "file": {
+              "keyType": "Account", 
               "enabled": true
             }
           }, 
@@ -233,8 +235,25 @@
     {
       "name": "[parameters('schedules_shutdown_computevm_terra1vm_name')]", 
       "tags": {
+        "Backup attribute": "", 
+        "Data Classification": "", 
+        "Owner's Department": "", 
+        "Solution Architect": "", 
+        "Business Application Service": "", 
+        "Internal Billing Code": "", 
+        "Service Owner": "", 
+        "Release Time": "", 
+        "System": "", 
         "environment": "Development", 
-        "backup": "true"
+        "Hibernation": "", 
+        "Operating System with version": "", 
+        "Service Level": "", 
+        "Regulatory": "", 
+        "Security Zone": "", 
+        "Service Name": "", 
+        "Order Number": "", 
+        "backup": "true", 
+        "Add-on for OS": ""
       }, 
       "apiVersion": "2018-09-15", 
       "location": "eastus", 
@@ -260,7 +279,7 @@
     }, 
     {
       "name": "[concat(parameters('networkSecurityGroups_testnsg_name'), '/nodejs')]", 
-      "apiVersion": "2019-09-01", 
+      "apiVersion": "2019-11-01", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/nodejs'.", 
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
@@ -283,7 +302,7 @@
     }, 
     {
       "name": "[concat(parameters('networkSecurityGroups_testnsg_name'), '/SSH')]", 
-      "apiVersion": "2019-09-01", 
+      "apiVersion": "2019-11-01", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/networkSecurityGroups/testnsg/securityRules/SSH'.", 
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_testnsg_name'))]"
@@ -306,7 +325,7 @@
     }, 
     {
       "name": "[concat(parameters('virtualNetworks_testVnet_name'), '/testSubnet')]", 
-      "apiVersion": "2019-09-01", 
+      "apiVersion": "2019-11-01", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Network/virtualNetworks/testVnet/subnets/testSubnet'.", 
       "dependsOn": [
         "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_testVnet_name'))]"
@@ -377,7 +396,7 @@
         "name": "Standard_LRS"
       }, 
       "name": "[concat(parameters('storageAccounts_diag276f6bbed2562354_name'), '/default')]", 
-      "apiVersion": "2019-04-01", 
+      "apiVersion": "2019-06-01", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354/blobServices/default'.", 
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
@@ -393,12 +412,29 @@
       }
     }, 
     {
+      "sku": {
+        "name": "Standard_LRS"
+      }, 
+      "name": "[concat(parameters('storageAccounts_diag276f6bbed2562354_name'), '/default')]", 
+      "apiVersion": "2019-06-01", 
+      "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354/fileServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_diag276f6bbed2562354_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/fileServices", 
+      "properties": {
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
       "name": "[parameters('virtualMachines_terra1vm_name')]", 
       "tags": {
         "environment": "Development", 
         "backup": "true"
       }, 
-      "apiVersion": "2019-03-01", 
+      "apiVersion": "2019-07-01", 
       "location": "eastus", 
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_testNIC_name'))]", 
@@ -419,7 +455,9 @@
           "osDisk": {
             "name": "myOsDisk", 
             "writeAcceleratorEnabled": false, 
+            "diskSizeGB": 30, 
             "managedDisk": {
+              "storageAccountType": "Premium_LRS", 
               "id": "[resourceId('Microsoft.Compute/disks', 'myOsDisk')]"
             }, 
             "caching": "ReadWrite", 
@@ -429,9 +467,10 @@
           "dataDisks": []
         }, 
         "osProfile": {
-          "adminUsername": "ubuntu", 
-          "secrets": [], 
           "computerName": "[parameters('virtualMachines_terra1vm_name')]", 
+          "secrets": [], 
+          "allowExtensionOperations": true, 
+          "requireGuestProvisionSignal": true, 
           "linuxConfiguration": {
             "ssh": {
               "publicKeys": [
@@ -444,7 +483,7 @@
             "disablePasswordAuthentication": false, 
             "provisionVMAgent": true
           }, 
-          "allowExtensionOperations": true
+          "adminUsername": "ubuntu"
         }, 
         "diagnosticsProfile": {
           "bootDiagnostics": {
@@ -510,8 +549,21 @@
           }
         ], 
         "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria", 
+          "allOf": [
+            {
+              "dimensions": [], 
+              "criterionType": "StaticThresholdCriterion", 
+              "operator": "GreaterThanOrEqual", 
+              "metricNamespace": "microsoft.storage/storageaccounts", 
+              "threshold": 75.0, 
+              "metricName": "Availability", 
+              "timeAggregation": "Average", 
+              "name": "Availability_75"
+            }
+          ]
         }, 
+        "targetResourceType": "microsoft.storage/storageaccounts", 
         "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-Availability-diag276f6bbed2562354-df1f6'."
@@ -561,8 +613,21 @@
           }
         ], 
         "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria", 
+          "allOf": [
+            {
+              "dimensions": [], 
+              "criterionType": "StaticThresholdCriterion", 
+              "operator": "GreaterThanOrEqual", 
+              "metricNamespace": "microsoft.compute/virtualmachines", 
+              "threshold": 1000000000.0, 
+              "metricName": "Network Out", 
+              "timeAggregation": "Total", 
+              "name": "NetworkOut_1000000000"
+            }
+          ]
         }, 
+        "targetResourceType": "microsoft.compute/virtualmachines", 
         "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-NetworkOut-terra1vm-42174'."
@@ -612,8 +677,21 @@
           }
         ], 
         "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria", 
+          "allOf": [
+            {
+              "dimensions": [], 
+              "criterionType": "StaticThresholdCriterion", 
+              "operator": "GreaterThan", 
+              "metricNamespace": "microsoft.compute/virtualmachines", 
+              "threshold": 75.0, 
+              "metricName": "Percentage CPU", 
+              "timeAggregation": "Average", 
+              "name": "PercentageCPU_75"
+            }
+          ]
         }, 
+        "targetResourceType": "microsoft.compute/virtualmachines", 
         "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-PercentageCPU-terra1vm-42174'."
@@ -663,15 +741,28 @@
           }
         ], 
         "criteria": {
-          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+          "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria", 
+          "allOf": [
+            {
+              "dimensions": [], 
+              "criterionType": "StaticThresholdCriterion", 
+              "operator": "GreaterThanOrEqual", 
+              "metricNamespace": "microsoft.storage/storageaccounts", 
+              "threshold": 80000000.0, 
+              "metricName": "UsedCapacity", 
+              "timeAggregation": "Average", 
+              "name": "UsedCapacity_80000000"
+            }
+          ]
         }, 
+        "targetResourceType": "microsoft.storage/storageaccounts", 
         "evaluationFrequency": "PT1M"
       }, 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/microsoft.insights/metricAlerts/CS-UsedCapacity-diag276f6bbed2562354-df1f6'."
     }, 
     {
       "name": "[parameters('networkInterfaces_testNIC_name')]", 
-      "apiVersion": "2019-09-01", 
+      "apiVersion": "2019-11-01", 
       "location": "eastus", 
       "dependsOn": [
         "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_testVnet_name'), 'testSubnet')]", 
@@ -706,7 +797,7 @@
     }, 
     {
       "name": "[concat(parameters('storageAccounts_diag276f6bbed2562354_name'), '/default/bootdiagnostics-terra1vm-d08f5fc0-9410-4255-a837-392400057164')]", 
-      "apiVersion": "2019-04-01", 
+      "apiVersion": "2019-06-01", 
       "comments": "Generalized from resource: '/subscriptions/6bba222e-cfcb-46f1-8224-49cd213cd76c/resourceGroups/terra1rg/providers/Microsoft.Storage/storageAccounts/diag276f6bbed2562354/blobServices/default/containers/bootdiagnostics-terra1vm-d08f5fc0-9410-4255-a837-392400057164'.", 
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_diag276f6bbed2562354_name'), 'default')]", 
