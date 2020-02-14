@@ -16,7 +16,7 @@
       "type": "String"
     }, 
     "storageAccounts_sgcrmdemodiag_name": {
-      "defaultValue": "sgcrmdemodiag", 
+      "defaultValue": "sgcrmdemodiag3", 
       "type": "String"
     }, 
     "virtualNetworks_sgcrmdemo_vnet_name": {
