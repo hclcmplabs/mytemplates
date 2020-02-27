@@ -1,0 +1,472 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#", 
+  "contentVersion": "1.0.0.0", 
+  "variables": {}, 
+  "parameters": {
+    "virtualMachines_sgvm1_name": {
+      "defaultValue": "sgvm1", 
+      "type": "String"
+    }, 
+    "networkSecurityGroups_sgvm1_nsg_name": {
+      "defaultValue": "sgvm1-nsg", 
+      "type": "String"
+    }, 
+    "publicIPAddresses_sgvm1_ip_name": {
+      "defaultValue": "sgvm1-ip", 
+      "type": "String"
+    }, 
+    "storageAccounts_sgcrmdemodiag_name": {
+      "defaultValue": "sgcrmdemodiag", 
+      "type": "String"
+    }, 
+    "virtualNetworks_sgcrmdemo_vnet_name": {
+      "defaultValue": "sgcrmdemo-vnet", 
+      "type": "String"
+    }, 
+    "networkInterfaces_sgvm1719_name": {
+      "defaultValue": "sgvm1719", 
+      "type": "String"
+    }
+  }, 
+  "resources": [
+    {
+      "name": "[parameters('networkSecurityGroups_sgvm1_nsg_name')]", 
+      "tags": {
+        "environment": "Development"
+      }, 
+      "apiVersion": "2019-11-01", 
+      "location": "southindia", 
+      "type": "Microsoft.Network/networkSecurityGroups", 
+      "properties": {
+        "securityRules": [
+          {
+            "name": "ssh", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1010, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "22", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "http", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1020, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "80", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "https", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1030, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "443", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }, 
+          {
+            "name": "mysql", 
+            "properties": {
+              "sourceAddressPrefixes": [], 
+              "priority": 1040, 
+              "direction": "Inbound", 
+              "protocol": "TCP", 
+              "destinationPortRanges": [], 
+              "access": "Allow", 
+              "destinationAddressPrefixes": [], 
+              "destinationPortRange": "3306", 
+              "sourcePortRange": "*", 
+              "sourcePortRanges": [], 
+              "destinationAddressPrefix": "*", 
+              "sourceAddressPrefix": "*"
+            }
+          }
+        ]
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/networkSecurityGroups/sgvm1-nsg'."
+    }, 
+    {
+      "sku": {
+        "name": "Basic"
+      }, 
+      "name": "[parameters('publicIPAddresses_sgvm1_ip_name')]", 
+      "tags": {
+        "environment": "Development"
+      }, 
+      "apiVersion": "2019-11-01", 
+      "location": "southindia", 
+      "type": "Microsoft.Network/publicIPAddresses", 
+      "properties": {
+        "publicIPAllocationMethod": "Dynamic", 
+        "publicIPAddressVersion": "IPv4", 
+        "ipAddress": "104.211.200.236", 
+        "idleTimeoutInMinutes": 4, 
+        "ipTags": []
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/publicIPAddresses/sgvm1-ip'."
+    }, 
+    {
+      "name": "[parameters('virtualNetworks_sgcrmdemo_vnet_name')]", 
+      "tags": {
+        "environment": "Development"
+      }, 
+      "apiVersion": "2019-11-01", 
+      "location": "southindia", 
+      "type": "Microsoft.Network/virtualNetworks", 
+      "properties": {
+        "virtualNetworkPeerings": [], 
+        "subnets": [
+          {
+            "name": "default", 
+            "properties": {
+              "addressPrefix": "10.1.1.0/24", 
+              "privateEndpointNetworkPolicies": "Enabled", 
+              "delegations": [], 
+              "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+          }
+        ], 
+        "enableDdosProtection": false, 
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.1.1.0/24"
+          ]
+        }, 
+        "enableVmProtection": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/virtualNetworks/sgcrmdemo-vnet'."
+    }, 
+    {
+      "sku": {
+        "tier": "Standard", 
+        "name": "Standard_LRS"
+      }, 
+      "kind": "Storage", 
+      "name": "[parameters('storageAccounts_sgcrmdemodiag_name')]", 
+      "tags": {
+        "environment": "Development"
+      }, 
+      "apiVersion": "2019-06-01", 
+      "location": "southindia", 
+      "type": "Microsoft.Storage/storageAccounts", 
+      "properties": {
+        "supportsHttpsTrafficOnly": true, 
+        "encryption": {
+          "services": {
+            "blob": {
+              "keyType": "Account", 
+              "enabled": true
+            }, 
+            "file": {
+              "keyType": "Account", 
+              "enabled": true
+            }
+          }, 
+          "keySource": "Microsoft.Storage"
+        }, 
+        "networkAcls": {
+          "defaultAction": "Allow", 
+          "ipRules": [], 
+          "virtualNetworkRules": [], 
+          "bypass": "AzureServices"
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Storage/storageAccounts/sgcrmdemodiag'."
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_sgvm1_nsg_name'), '/http')]", 
+      "apiVersion": "2019-11-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/networkSecurityGroups/sgvm1-nsg/securityRules/http'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_sgvm1_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1020, 
+        "direction": "Inbound", 
+        "protocol": "TCP", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "80", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_sgvm1_nsg_name'), '/https')]", 
+      "apiVersion": "2019-11-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/networkSecurityGroups/sgvm1-nsg/securityRules/https'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_sgvm1_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1030, 
+        "direction": "Inbound", 
+        "protocol": "TCP", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "443", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_sgvm1_nsg_name'), '/mysql')]", 
+      "apiVersion": "2019-11-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/networkSecurityGroups/sgvm1-nsg/securityRules/mysql'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_sgvm1_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1040, 
+        "direction": "Inbound", 
+        "protocol": "TCP", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "3306", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('networkSecurityGroups_sgvm1_nsg_name'), '/ssh')]", 
+      "apiVersion": "2019-11-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/networkSecurityGroups/sgvm1-nsg/securityRules/ssh'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_sgvm1_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules", 
+      "properties": {
+        "sourceAddressPrefixes": [], 
+        "priority": 1010, 
+        "direction": "Inbound", 
+        "protocol": "TCP", 
+        "destinationPortRanges": [], 
+        "access": "Allow", 
+        "destinationAddressPrefixes": [], 
+        "destinationPortRange": "22", 
+        "sourcePortRange": "*", 
+        "sourcePortRanges": [], 
+        "destinationAddressPrefix": "*", 
+        "sourceAddressPrefix": "*"
+      }
+    }, 
+    {
+      "name": "[concat(parameters('virtualNetworks_sgcrmdemo_vnet_name'), '/default')]", 
+      "apiVersion": "2019-11-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/virtualNetworks/sgcrmdemo-vnet/subnets/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_sgcrmdemo_vnet_name'))]"
+      ], 
+      "type": "Microsoft.Network/virtualNetworks/subnets", 
+      "properties": {
+        "addressPrefix": "10.1.1.0/24", 
+        "privateEndpointNetworkPolicies": "Enabled", 
+        "delegations": [], 
+        "privateLinkServiceNetworkPolicies": "Enabled"
+      }
+    }, 
+    {
+      "sku": {
+        "name": "Standard_LRS"
+      }, 
+      "name": "[concat(parameters('storageAccounts_sgcrmdemodiag_name'), '/default')]", 
+      "apiVersion": "2019-06-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Storage/storageAccounts/sgcrmdemodiag/blobServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_sgcrmdemodiag_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices", 
+      "properties": {
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }, 
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "sku": {
+        "name": "Standard_LRS"
+      }, 
+      "name": "[concat(parameters('storageAccounts_sgcrmdemodiag_name'), '/default')]", 
+      "apiVersion": "2019-06-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Storage/storageAccounts/sgcrmdemodiag/fileServices/default'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_sgcrmdemodiag_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/fileServices", 
+      "properties": {
+        "cors": {
+          "corsRules": []
+        }
+      }
+    }, 
+    {
+      "name": "[parameters('virtualMachines_sgvm1_name')]", 
+      "tags": {
+        "environment": "Development", 
+        "Name": "sgvm1", 
+        "CMP Reference Sandbox": "yes"
+      }, 
+      "apiVersion": "2019-07-01", 
+      "location": "southindia", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_sgvm1719_name'))]", 
+        "[resourceId('Microsoft.Storage/StorageAccounts', parameters('storageAccounts_sgcrmdemodiag_name'))]"
+      ], 
+      "plan": {
+        "publisher": "miri-infotech-pvt-ltd", 
+        "product": "sugarcrm", 
+        "name": "sugarcrm"
+      }, 
+      "type": "Microsoft.Compute/virtualMachines", 
+      "properties": {
+        "hardwareProfile": {
+          "vmSize": "Standard_B1s"
+        }, 
+        "storageProfile": {
+          "imageReference": {
+            "sku": "sugarcrm", 
+            "publisher": "miri-infotech-pvt-ltd", 
+            "version": "1.1.1", 
+            "offer": "sugarcrm"
+          }, 
+          "osDisk": {
+            "name": "[concat(parameters('virtualMachines_sgvm1_name'), '_OsDisk_1_a8a1ed0c07bd43eeae37f1088a1b3bb2')]", 
+            "diskSizeGB": 30, 
+            "managedDisk": {
+              "storageAccountType": "StandardSSD_LRS", 
+              "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_sgvm1_name'), '_OsDisk_1_a8a1ed0c07bd43eeae37f1088a1b3bb2'))]"
+            }, 
+            "caching": "ReadWrite", 
+            "createOption": "FromImage", 
+            "osType": "Linux"
+          }, 
+          "dataDisks": []
+        }, 
+        "osProfile": {
+          "computerName": "[parameters('virtualMachines_sgvm1_name')]", 
+          "secrets": [], 
+          "allowExtensionOperations": true, 
+          "requireGuestProvisionSignal": true, 
+          "linuxConfiguration": {
+            "provisionVMAgent": true, 
+            "disablePasswordAuthentication": false
+          }, 
+          "adminUsername": "sguser"
+        }, 
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "storageUri": "[concat('https://', parameters('storageAccounts_sgcrmdemodiag_name'), '.blob.core.windows.net/')]", 
+            "enabled": true
+          }
+        }, 
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_sgvm1719_name'))]"
+            }
+          ]
+        }
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Compute/virtualMachines/sgvm1'."
+    }, 
+    {
+      "name": "[concat(parameters('storageAccounts_sgcrmdemodiag_name'), '/default/bootdiagnostics-sgvm1-35eac5d7-d1d3-482a-8ad7-eac969815e08')]", 
+      "apiVersion": "2019-06-01", 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Storage/storageAccounts/sgcrmdemodiag/blobServices/default/containers/bootdiagnostics-sgvm1-35eac5d7-d1d3-482a-8ad7-eac969815e08'.", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_sgcrmdemodiag_name'), 'default')]", 
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_sgcrmdemodiag_name'))]"
+      ], 
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers", 
+      "properties": {
+        "publicAccess": "None"
+      }
+    }, 
+    {
+      "name": "[parameters('networkInterfaces_sgvm1719_name')]", 
+      "tags": {
+        "environment": "Development"
+      }, 
+      "apiVersion": "2019-11-01", 
+      "location": "southindia", 
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_sgvm1_ip_name'))]", 
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_sgcrmdemo_vnet_name'), 'default')]", 
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_sgvm1_nsg_name'))]"
+      ], 
+      "type": "Microsoft.Network/networkInterfaces", 
+      "properties": {
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_sgvm1_nsg_name'))]"
+        }, 
+        "enableIPForwarding": false, 
+        "dnsSettings": {
+          "dnsServers": []
+        }, 
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1", 
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_sgcrmdemo_vnet_name'), 'default')]"
+              }, 
+              "primary": true, 
+              "privateIPAddressVersion": "IPv4", 
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_sgvm1_ip_name'))]"
+              }, 
+              "privateIPAllocationMethod": "Dynamic", 
+              "privateIPAddress": "10.1.1.4"
+            }
+          }
+        ], 
+        "enableAcceleratedNetworking": false
+      }, 
+      "comments": "Generalized from resource: '/subscriptions/d3db3888-c566-487d-a29c-fc9607187aee/resourceGroups/sgcrmdemo/providers/Microsoft.Network/networkInterfaces/sgvm1719'."
+    }
+  ]
+}
